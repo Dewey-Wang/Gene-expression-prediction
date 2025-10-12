@@ -59,9 +59,6 @@ preprocessed_data/
         ├───test
         │   └───chr1
         │       └───X3
-        ├───train
-        │   └───chr1
-        │       └───X3
         └───train
             ├── chr2/
             │ ├── X1/
