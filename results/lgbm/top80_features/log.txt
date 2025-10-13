@@ -1,0 +1,62 @@
+🚀 Experiment started at 2025-10-13 21:59:42
+Experiment directory: ../results/lgbm/top80_features
+Feature count: 80
+🧩 Chromosome folds:
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/top80_features/fold_1/model.pkl
+📈 Fold 1 Overall Spearman ρ = 0.7480
+📊 Per-Chromosome Spearman:
+   chr12 : ρ = 0.7544
+   chr17 : ρ = 0.7509
+   chr2  : ρ = 0.7353
+   chr22 : ρ = 0.7446
+   chr7  : ρ = 0.7553
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/top80_features/fold_2/model.pkl
+📈 Fold 2 Overall Spearman ρ = 0.7603
+📊 Per-Chromosome Spearman:
+   chr13 : ρ = 0.6994
+   chr18 : ρ = 0.7719
+   chr3  : ρ = 0.7701
+   chr8  : ρ = 0.7609
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/top80_features/fold_3/model.pkl
+📈 Fold 3 Overall Spearman ρ = 0.7156
+📊 Per-Chromosome Spearman:
+   chr14 : ρ = 0.7368
+   chr19 : ρ = 0.6956
+   chr4  : ρ = 0.7285
+   chr9  : ρ = 0.7084
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/top80_features/fold_4/model.pkl
+📈 Fold 4 Overall Spearman ρ = 0.7439
+📊 Per-Chromosome Spearman:
+   chr10 : ρ = 0.7335
+   chr15 : ρ = 0.7661
+   chr20 : ρ = 0.7393
+   chr5  : ρ = 0.7490
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/top80_features/fold_5/model.pkl
+📈 Fold 5 Overall Spearman ρ = 0.7376
+📊 Per-Chromosome Spearman:
+   chr11 : ρ = 0.7595
+   chr16 : ρ = 0.7151
+   chr21 : ρ = 0.7480
+   chr6  : ρ = 0.7070
+💾 Final predictions (aligned) saved (predict_val.tsv)
+🌍 Overall validation Spearman (aligned) = 0.7275
+💾 Summary saved (summary.tsv)
+Mean Spearman (across folds): 0.7411
+Overall mean of per-chromosome means: 0.7395
+
+✅ Experiment finished at 2025-10-13 21:59:52
