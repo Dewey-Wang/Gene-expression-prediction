@@ -225,3 +225,7 @@ pyrightconfig.json
 ML4G_Project_1_Data/**/*.bed
 ML4G_Project_1_Data/**/*.bw
 ML4G_Project_1_Data/**/*.bigwig
+preprocessed_data/CAGE-merged/X2_all_rank_features.tsv
+preprocessed_data/CAGE-merged/X1_all_rank_features.tsv
+preprocessed_data/CAGE-merged/X2_all_rank_features_pruned.tsv
+preprocessed_data/CAGE-merged/X1_all_rank_features_pruned.tsv
