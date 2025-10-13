@@ -227,5 +227,3 @@ ML4G_Project_1_Data/**/*.bw
 ML4G_Project_1_Data/**/*.bigwig
 preprocessed_data/CAGE-merged/3. add features engineer/X1_all_rank_features.tsv
 preprocessed_data/CAGE-merged/3. add features engineer/X2_all_rank_features.tsv
-preprocessed_data/CAGE-merged/4. features selection/X1_all_rank_features_pruned.tsv
-preprocessed_data/CAGE-merged/4. features selection/X2_all_rank_features_pruned.tsv
