@@ -1,0 +1,13 @@
+{
+    "booster": "gbtree",
+    "booeval_metricster": "mae",
+    "learning_rate": 0.035962471748043,
+    "max_depth": 10,
+    "max_leaves": 104,
+    "subsample": 0.8971619038015882,
+    "colsample_bytree": 0.6636371114832225,
+    "alpha": 0.12734537736853208,
+    "lambda": 1.628472451981166,
+    "gamma": 0.0024413287883050493,
+    "min_child_weight": 53
+}

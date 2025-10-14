@@ -1,0 +1,61 @@
+🚀 Experiment started at 2025-10-14 11:46:53
+Experiment directory: ../results/xgb/model_setting/v5
+Feature count: 277
+🧩 Chromosome folds:
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/xgb/model_setting/v5\fold_1\model.json
+📈 Fold 1 Overall Spearman ρ = 0.7639
+📊 Per-Chromosome Spearman:
+   chr12 : ρ = 0.7773
+   chr17 : ρ = 0.7574
+   chr2  : ρ = 0.7613
+   chr22 : ρ = 0.7444
+   chr7  : ρ = 0.7661
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/xgb/model_setting/v5\fold_2\model.json
+📈 Fold 2 Overall Spearman ρ = 0.7654
+📊 Per-Chromosome Spearman:
+   chr13 : ρ = 0.7137
+   chr18 : ρ = 0.7827
+   chr3  : ρ = 0.7761
+   chr8  : ρ = 0.7599
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/xgb/model_setting/v5\fold_3\model.json
+📈 Fold 3 Overall Spearman ρ = 0.7625
+📊 Per-Chromosome Spearman:
+   chr14 : ρ = 0.7775
+   chr19 : ρ = 0.7455
+   chr4  : ρ = 0.7626
+   chr9  : ρ = 0.7643
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/xgb/model_setting/v5\fold_4\model.json
+📈 Fold 4 Overall Spearman ρ = 0.7609
+📊 Per-Chromosome Spearman:
+   chr10 : ρ = 0.7567
+   chr15 : ρ = 0.7658
+   chr20 : ρ = 0.7396
+   chr5  : ρ = 0.7784
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/xgb/model_setting/v5\fold_5\model.json
+📈 Fold 5 Overall Spearman ρ = 0.7523
+📊 Per-Chromosome Spearman:
+   chr11 : ρ = 0.7729
+   chr16 : ρ = 0.7271
+   chr21 : ρ = 0.7364
+   chr6  : ρ = 0.7338
+💾 Final predictions saved (predict_val.tsv)
+🌍 Overall validation Spearman (aligned) = 0.7611
+Mean Spearman (across folds): 0.7610
+Overall mean of per-chromosome means: 0.7571
+
+✅ Experiment finished at 2025-10-14 11:48:01

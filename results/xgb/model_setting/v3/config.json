@@ -1,0 +1,58 @@
+{
+    "train_path": "../preprocessed_data/CAGE-merged/4. features selection/X1_all_rank_features_pruned.tsv",
+    "val_path": "../preprocessed_data/CAGE-merged/4. features selection/X2_all_rank_features_pruned.tsv",
+    "seed": 42,
+    "params": {
+        "booster": "gbtree",
+        "verbosity": 1,
+        "learning_rate": 0.016676974956976915,
+        "max_depth": 15,
+        "colsample_bytree": 0.64561553423692,
+        "subsample": 0.8113835038425429,
+        "subsample_freq": 6,
+        "alpha": 0.3316673054635859,
+        "lambda": 0.8969317795206216,
+        "gamma": 0.04923442843722911,
+        "min_child_weight": 38,
+        "max_leaves": 48,
+        "objective": "reg:squarederror",
+        "eval_metric": "rmse",
+        "nthread": 8,
+        "random_state": 42,
+        "tree_method": "hist"
+    },
+    "folds": [
+        [
+            "chr2",
+            "chr7",
+            "chr12",
+            "chr17",
+            "chr22"
+        ],
+        [
+            "chr3",
+            "chr8",
+            "chr13",
+            "chr18"
+        ],
+        [
+            "chr4",
+            "chr9",
+            "chr14",
+            "chr19"
+        ],
+        [
+            "chr5",
+            "chr10",
+            "chr15",
+            "chr20"
+        ],
+        [
+            "chr6",
+            "chr11",
+            "chr16",
+            "chr21"
+        ]
+    ],
+    "target_col": "gex_rank"
+}
