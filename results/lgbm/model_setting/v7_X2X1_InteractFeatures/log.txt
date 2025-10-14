@@ -1,0 +1,61 @@
+🚀 Experiment started at 2025-10-14 12:59:08
+Experiment directory: ../results/lgbm/model_setting/v7_X2X1_InteractFeatures
+Feature count: 125
+🧩 Chromosome folds:
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/model_setting/v7_X2X1_InteractFeatures\fold_1\model.pkl
+📈 Fold 1 Overall Spearman ρ = 0.7550
+📊 Per-Chromosome Spearman:
+   chr12 : ρ = 0.7660
+   chr17 : ρ = 0.7431
+   chr2  : ρ = 0.7476
+   chr22 : ρ = 0.7841
+   chr7  : ρ = 0.7494
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/model_setting/v7_X2X1_InteractFeatures\fold_2\model.pkl
+📈 Fold 2 Overall Spearman ρ = 0.7607
+📊 Per-Chromosome Spearman:
+   chr13 : ρ = 0.7180
+   chr18 : ρ = 0.7493
+   chr3  : ρ = 0.7772
+   chr8  : ρ = 0.7539
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/model_setting/v7_X2X1_InteractFeatures\fold_3\model.pkl
+📈 Fold 3 Overall Spearman ρ = 0.7702
+📊 Per-Chromosome Spearman:
+   chr14 : ρ = 0.7962
+   chr19 : ρ = 0.7678
+   chr4  : ρ = 0.7532
+   chr9  : ρ = 0.7512
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/model_setting/v7_X2X1_InteractFeatures\fold_4\model.pkl
+📈 Fold 4 Overall Spearman ρ = 0.7635
+📊 Per-Chromosome Spearman:
+   chr10 : ρ = 0.7614
+   chr15 : ρ = 0.7790
+   chr20 : ρ = 0.7538
+   chr5  : ρ = 0.7626
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/model_setting/v7_X2X1_InteractFeatures\fold_5\model.pkl
+📈 Fold 5 Overall Spearman ρ = 0.7579
+📊 Per-Chromosome Spearman:
+   chr11 : ρ = 0.7616
+   chr16 : ρ = 0.7338
+   chr21 : ρ = 0.7442
+   chr6  : ρ = 0.7520
+💾 Final predictions (aligned) saved (predict_val.tsv)
+🌍 Overall validation Spearman (aligned) = 0.7606
+Mean Spearman (across folds): 0.7615
+Overall mean of per-chromosome means: 0.7574
+
+✅ Experiment finished at 2025-10-14 12:59:26

@@ -1,0 +1,103 @@
+🚀 Linear models comparison started at 2025-10-14 12:17:26
+🧬 5 chromosome folds created
+
+🔧 Training model: LinearRegression
+
+📂 Fold 1/5 | Validation chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved to ../results/linear_models/comparison_v1\LinearRegression\fold_1.pkl
+📈 Fold 1 Overall Spearman: 0.6985
+
+📂 Fold 2/5 | Validation chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved to ../results/linear_models/comparison_v1\LinearRegression\fold_2.pkl
+📈 Fold 2 Overall Spearman: 0.7089
+
+📂 Fold 3/5 | Validation chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved to ../results/linear_models/comparison_v1\LinearRegression\fold_3.pkl
+📈 Fold 3 Overall Spearman: 0.7191
+
+📂 Fold 4/5 | Validation chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved to ../results/linear_models/comparison_v1\LinearRegression\fold_4.pkl
+📈 Fold 4 Overall Spearman: 0.6942
+
+📂 Fold 5/5 | Validation chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved to ../results/linear_models/comparison_v1\LinearRegression\fold_5.pkl
+📈 Fold 5 Overall Spearman: 0.6946
+✅ LinearRegression | mean_overall=0.7030, mean_perchr=0.6988
+
+🔧 Training model: Ridge
+
+📂 Fold 1/5 | Validation chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved to ../results/linear_models/comparison_v1\Ridge\fold_1.pkl
+📈 Fold 1 Overall Spearman: 0.6990
+
+📂 Fold 2/5 | Validation chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved to ../results/linear_models/comparison_v1\Ridge\fold_2.pkl
+📈 Fold 2 Overall Spearman: 0.7092
+
+📂 Fold 3/5 | Validation chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved to ../results/linear_models/comparison_v1\Ridge\fold_3.pkl
+📈 Fold 3 Overall Spearman: 0.7197
+
+📂 Fold 4/5 | Validation chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved to ../results/linear_models/comparison_v1\Ridge\fold_4.pkl
+📈 Fold 4 Overall Spearman: 0.6948
+
+📂 Fold 5/5 | Validation chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved to ../results/linear_models/comparison_v1\Ridge\fold_5.pkl
+📈 Fold 5 Overall Spearman: 0.6949
+✅ Ridge | mean_overall=0.7035, mean_perchr=0.6994
+
+🔧 Training model: Lasso
+
+📂 Fold 1/5 | Validation chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved to ../results/linear_models/comparison_v1\Lasso\fold_1.pkl
+📈 Fold 1 Overall Spearman: 0.7322
+
+📂 Fold 2/5 | Validation chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved to ../results/linear_models/comparison_v1\Lasso\fold_2.pkl
+📈 Fold 2 Overall Spearman: 0.7430
+
+📂 Fold 3/5 | Validation chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved to ../results/linear_models/comparison_v1\Lasso\fold_3.pkl
+📈 Fold 3 Overall Spearman: 0.7487
+
+📂 Fold 4/5 | Validation chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved to ../results/linear_models/comparison_v1\Lasso\fold_4.pkl
+📈 Fold 4 Overall Spearman: 0.7397
+
+📂 Fold 5/5 | Validation chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved to ../results/linear_models/comparison_v1\Lasso\fold_5.pkl
+📈 Fold 5 Overall Spearman: 0.7334
+✅ Lasso | mean_overall=0.7394, mean_perchr=0.7357
+
+🔧 Training model: ElasticNet
+
+📂 Fold 1/5 | Validation chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved to ../results/linear_models/comparison_v1\ElasticNet\fold_1.pkl
+📈 Fold 1 Overall Spearman: 0.7276
+
+📂 Fold 2/5 | Validation chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved to ../results/linear_models/comparison_v1\ElasticNet\fold_2.pkl
+📈 Fold 2 Overall Spearman: 0.7377
+
+📂 Fold 3/5 | Validation chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved to ../results/linear_models/comparison_v1\ElasticNet\fold_3.pkl
+📈 Fold 3 Overall Spearman: 0.7442
+
+📂 Fold 4/5 | Validation chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved to ../results/linear_models/comparison_v1\ElasticNet\fold_4.pkl
+📈 Fold 4 Overall Spearman: 0.7356
+
+📂 Fold 5/5 | Validation chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved to ../results/linear_models/comparison_v1\ElasticNet\fold_5.pkl
+📈 Fold 5 Overall Spearman: 0.7295
+✅ ElasticNet | mean_overall=0.7349, mean_perchr=0.7312
+
+🏁 Summary of all models:
+           model  mean_overall  mean_perchr
+           Lasso      0.739407     0.735684
+      ElasticNet      0.734918     0.731166
+           Ridge      0.703533     0.699350
+LinearRegression      0.703044     0.698841
+
+💾 Summary saved to ../results/linear_models/comparison_v1\summary.tsv

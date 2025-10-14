@@ -1,0 +1,297 @@
+🚀 Lasso Regression experiment started at 2025-10-14 12:45:10
+Feature count: 277
+🧩 Chromosome folds:
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/linear_models/Lasso/model_setting/v2\fold_1\lasso_model.pkl
+📈 Fold 1 Overall Spearman ρ = 0.7638
+   chr12 : ρ = 0.7827
+   chr17 : ρ = 0.7537
+   chr2  : ρ = 0.7623
+   chr22 : ρ = 0.7441
+   chr7  : ρ = 0.7629
+🔎 Non-zero features: 110/277 (39.7%)
+💾 Feature importance saved: ../results/linear_models/Lasso/model_setting/v2\fold_1\lasso_feature_importance.tsv
+🏆 Top 10 strongest features:
+   DNase_tss_entropy                        -0.0537
+   DNase_H3K4me3_interaction_rank           +0.0307
+   DNase_ratio_std_rank                     +0.0239
+   H3K36me3_gene_z_mean_rank                +0.0229
+   DNase_tss_autocorr_rank                  +0.0229
+   DNase_promoter_body_delta_rank           +0.0214
+   H3K4me3_gene_z_std                       +0.0161
+   DNase_tss_entropy_rank                   +0.0131
+   H3K27ac_tss_z_mean_rank                  +0.0123
+   H3K4me3_promoter_body_delta              -0.0112
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/linear_models/Lasso/model_setting/v2\fold_2\lasso_model.pkl
+📈 Fold 2 Overall Spearman ρ = 0.7644
+   chr13 : ρ = 0.7020
+   chr18 : ρ = 0.7789
+   chr3  : ρ = 0.7763
+   chr8  : ρ = 0.7572
+🔎 Non-zero features: 114/277 (41.2%)
+💾 Feature importance saved: ../results/linear_models/Lasso/model_setting/v2\fold_2\lasso_feature_importance.tsv
+🏆 Top 10 strongest features:
+   DNase_tss_entropy                        -0.0593
+   DNase_ratio_std_rank                     +0.0289
+   DNase_H3K4me3_interaction_rank           +0.0277
+   DNase_tss_autocorr_rank                  +0.0274
+   DNase_tss_entropy_rank                   +0.0210
+   H3K36me3_gene_z_mean_rank                +0.0201
+   H3K4me3_gene_z_std                       +0.0157
+   H3K36me3_tss_z_mean_rank                 -0.0151
+   H3K4me3_promoter_body_delta              -0.0143
+   DNase_promoter_body_delta_rank           +0.0128
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/linear_models/Lasso/model_setting/v2\fold_3\lasso_model.pkl
+📈 Fold 3 Overall Spearman ρ = 0.7627
+   chr14 : ρ = 0.7730
+   chr19 : ρ = 0.7500
+   chr4  : ρ = 0.7721
+   chr9  : ρ = 0.7590
+🔎 Non-zero features: 107/277 (38.6%)
+💾 Feature importance saved: ../results/linear_models/Lasso/model_setting/v2\fold_3\lasso_feature_importance.tsv
+🏆 Top 10 strongest features:
+   DNase_tss_entropy                        -0.0592
+   DNase_ratio_std_rank                     +0.0285
+   DNase_tss_autocorr_rank                  +0.0269
+   DNase_H3K4me3_interaction_rank           +0.0266
+   DNase_tss_entropy_rank                   +0.0228
+   H3K36me3_gene_z_mean_rank                +0.0175
+   H3K4me3_gene_z_std                       +0.0157
+   DNase_promoter_body_delta_rank           +0.0152
+   H3K36me3_tss_z_mean_rank                 -0.0123
+   DNase_gene_autocorr_rank                 +0.0114
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/linear_models/Lasso/model_setting/v2\fold_4\lasso_model.pkl
+📈 Fold 4 Overall Spearman ρ = 0.7638
+   chr10 : ρ = 0.7437
+   chr15 : ρ = 0.7792
+   chr20 : ρ = 0.7490
+   chr5  : ρ = 0.7819
+🔎 Non-zero features: 112/277 (40.4%)
+💾 Feature importance saved: ../results/linear_models/Lasso/model_setting/v2\fold_4\lasso_feature_importance.tsv
+🏆 Top 10 strongest features:
+   DNase_tss_entropy                        -0.0580
+   DNase_H3K4me3_interaction_rank           +0.0276
+   DNase_ratio_std_rank                     +0.0274
+   DNase_tss_autocorr_rank                  +0.0259
+   DNase_tss_entropy_rank                   +0.0179
+   DNase_promoter_body_delta_rank           +0.0162
+   H3K36me3_tss_z_mean_rank                 -0.0160
+   H3K4me3_gene_z_std                       +0.0159
+   H3K36me3_axis_sum_rank                   +0.0131
+   H3K4me3_promoter_body_delta              -0.0128
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/linear_models/Lasso/model_setting/v2\fold_5\lasso_model.pkl
+📈 Fold 5 Overall Spearman ρ = 0.7507
+   chr11 : ρ = 0.7664
+   chr16 : ρ = 0.7207
+   chr21 : ρ = 0.7657
+   chr6  : ρ = 0.7367
+🔎 Non-zero features: 121/277 (43.7%)
+💾 Feature importance saved: ../results/linear_models/Lasso/model_setting/v2\fold_5\lasso_feature_importance.tsv
+🏆 Top 10 strongest features:
+   DNase_tss_entropy                        -0.0539
+   DNase_ratio_std_rank                     +0.0328
+   DNase_tss_autocorr_rank                  +0.0258
+   DNase_H3K4me3_interaction_rank           +0.0225
+   H3K36me3_gene_z_mean_rank                +0.0223
+   DNase_tss_entropy_rank                   +0.0175
+   H3K36me3_tss_z_mean_rank                 -0.0151
+   H3K27ac_tss_z_mean_rank                  +0.0149
+   H3K4me3_gene_z_std                       +0.0148
+   DNase_promoter_body_delta_rank           +0.0134
+💾 Final predictions saved (predict_val.tsv)
+🌍 Overall validation Spearman (aligned) = 0.7614
+Mean Spearman (across folds): 0.7611
+Overall mean of per-chromosome means: 0.7580
+
+✅ Lasso Regression experiment finished at 2025-10-14 12:45:59
+📊 Feature stability summary saved: feature_stability_summary.tsv
+
+📊 Aggregating feature importances across folds...
+💾 Feature stability summary saved: ../results/linear_models/Lasso/model_setting/v2\feature_stability_summary.tsv
+
+🧬 Total non-zero features across folds: 170/277
+📋 List of all non-zero features:
+   DNase_tss_entropy                         folds=5  mean_coef=-0.0568
+   DNase_ratio_std_rank                      folds=5  mean_coef=+0.0283
+   DNase_H3K4me3_interaction_rank            folds=5  mean_coef=+0.0270
+   DNase_tss_autocorr_rank                   folds=5  mean_coef=+0.0258
+   H3K36me3_gene_z_mean_rank                 folds=5  mean_coef=+0.0188
+   DNase_tss_entropy_rank                    folds=5  mean_coef=+0.0184
+   DNase_promoter_body_delta_rank            folds=5  mean_coef=+0.0158
+   H3K4me3_gene_z_std                        folds=5  mean_coef=+0.0157
+   H3K36me3_tss_z_mean_rank                  folds=5  mean_coef=-0.0137
+   H3K4me3_promoter_body_delta               folds=5  mean_coef=-0.0121
+   DNase_gene_autocorr_rank                  folds=5  mean_coef=+0.0114
+   H3K27ac_tss_z_mean_rank                   folds=5  mean_coef=+0.0110
+   DNase_H3K27ac_interaction_rank            folds=5  mean_coef=+0.0104
+   H3K36me3_H3K4me1_interaction_rank         folds=5  mean_coef=-0.0079
+   H3K27me3_gene_z_std_rank                  folds=5  mean_coef=+0.0074
+   H3K4me1_tss_entropy_rank                  folds=5  mean_coef=-0.0073
+   H3K4me1_tss_z_min                         folds=5  mean_coef=-0.0066
+   H3K4me3_gene_autocorr_rank                folds=5  mean_coef=+0.0064
+   H3K27ac_tss_entropy_rank                  folds=5  mean_coef=-0.0061
+   H3K4me3_tss_z_min                         folds=5  mean_coef=-0.0058
+   H3K9me3_gene_z_std_rank                   folds=5  mean_coef=-0.0057
+   H3K27ac_tss_skewness                      folds=5  mean_coef=+0.0057
+   H3K36me3_ratio_std_rank                   folds=5  mean_coef=-0.0056
+   H3K27ac_H3K4me3_interaction_rank          folds=5  mean_coef=+0.0052
+   DNase_H3K27me3_interaction_rank           folds=5  mean_coef=+0.0052
+   promoter_variability_rank                 folds=5  mean_coef=+0.0052
+   DNase_tss_skewness_rank                   folds=5  mean_coef=-0.0051
+   H3K27ac_H3K36me3_interaction_rank         folds=5  mean_coef=-0.0049
+   DNase_tss_autocorr                        folds=5  mean_coef=-0.0048
+   H3K27ac_ratio_std_rank                    folds=5  mean_coef=-0.0046
+   H3K36me3_ratio_mean_rank                  folds=5  mean_coef=-0.0043
+   DNase_gene_z_std                          folds=5  mean_coef=-0.0043
+   H3K27me3_gene_z_mean_rank                 folds=5  mean_coef=+0.0043
+   tss_length                                folds=5  mean_coef=+0.0042
+   H3K36me3_axis_sum                         folds=5  mean_coef=+0.0040
+   H3K27me3_ratio_std_rank                   folds=5  mean_coef=-0.0037
+   H3K27ac_H3K4me3_interaction               folds=5  mean_coef=+0.0032
+   H3K9me3_gene_z_mean                       folds=5  mean_coef=-0.0030
+   DNase_gene_z_min                          folds=5  mean_coef=-0.0019
+   H3K4me1_tss_z_min_rank                    folds=5  mean_coef=-0.0026
+   DNase_ratio_mean_rank                     folds=5  mean_coef=+0.0026
+   H3K27ac_tss_z_min_rank                    folds=5  mean_coef=+0.0025
+   H3K9me3_tss_autocorr_rank                 folds=5  mean_coef=+0.0024
+   H3K27ac_H3K9me3_interaction               folds=5  mean_coef=-0.0024
+   H3K27ac_tss_kurtosis                      folds=5  mean_coef=+0.0023
+   H3K4me3_H3K27me3_interaction              folds=5  mean_coef=-0.0023
+   H3K27ac_gene_z_min                        folds=5  mean_coef=-0.0022
+   H3K4me1_tss_autocorr_rank                 folds=5  mean_coef=-0.0020
+   H3K36me3_gene_slope_rank                  folds=5  mean_coef=-0.0019
+   H3K27ac_gene_skewness                     folds=5  mean_coef=+0.0019
+   H3K36me3_tss_autocorr_rank                folds=5  mean_coef=+0.0019
+   H3K9me3_tss_z_min                         folds=5  mean_coef=-0.0017
+   H3K4me1_tss_kurtosis_rank                 folds=5  mean_coef=-0.0016
+   H3K9me3_tss_kurtosis_rank                 folds=5  mean_coef=+0.0016
+   H3K27me3_promoter_body_delta              folds=5  mean_coef=+0.0013
+   H3K4me1_gene_z_min_rank                   folds=5  mean_coef=-0.0012
+   H3K4me3_ratio_mean_rank                   folds=5  mean_coef=+0.0012
+   H3K4me3_tss_slope                         folds=5  mean_coef=-0.0009
+   H3K36me3_gene_z_min                       folds=5  mean_coef=-0.0006
+   H3K9me3_tss_kurtosis                      folds=5  mean_coef=-0.0005
+   H3K27me3_tss_slope                        folds=5  mean_coef=+0.0005
+   H3K36me3_axis_sum_rank                    folds=4  mean_coef=+0.0060
+   activation_index_rank                     folds=4  mean_coef=+0.0045
+   H3K27ac_tss_skewness_rank                 folds=4  mean_coef=-0.0031
+   H3K27me3_gene_z_std                       folds=4  mean_coef=-0.0025
+   H3K27ac_ratio_std                         folds=4  mean_coef=+0.0025
+   H3K27ac_gene_autocorr_rank                folds=4  mean_coef=+0.0016
+   H3K27me3_ratio_mean_rank                  folds=4  mean_coef=+0.0016
+   H3K4me3_H3K27me3_interaction_rank         folds=4  mean_coef=+0.0015
+   H3K9me3_axis_sum                          folds=4  mean_coef=-0.0014
+   H3K27me3_gene_entropy                     folds=4  mean_coef=+0.0014
+   DNase_H3K27me3_interaction                folds=4  mean_coef=-0.0013
+   H3K4me3_gene_z_min_rank                   folds=4  mean_coef=+0.0013
+   H3K27me3_gene_slope_rank                  folds=4  mean_coef=-0.0011
+   H3K27me3_tss_skewness                     folds=4  mean_coef=-0.0011
+   H3K4me1_tss_slope                         folds=4  mean_coef=-0.0009
+   DNase_gene_autocorr                       folds=4  mean_coef=-0.0009
+   H3K36me3_tss_slope_rank                   folds=4  mean_coef=+0.0009
+   H3K27me3_tss_z_min_rank                   folds=4  mean_coef=+0.0009
+   H3K27ac_H3K36me3_interaction              folds=4  mean_coef=-0.0008
+   H3K9me3_gene_slope_rank                   folds=4  mean_coef=-0.0008
+   H3K4me3_ratio_mean                        folds=4  mean_coef=-0.0007
+   H3K4me1_gene_kurtosis                     folds=4  mean_coef=-0.0007
+   H3K4me1_tss_skewness_rank                 folds=4  mean_coef=-0.0007
+   H3K36me3_tss_kurtosis                     folds=4  mean_coef=-0.0006
+   H3K36me3_H3K9me3_interaction              folds=4  mean_coef=-0.0003
+   H3K27me3_ratio_std                        folds=4  mean_coef=-0.0003
+   DNase_gene_slope_rank                     folds=4  mean_coef=-0.0002
+   H3K27ac_gene_z_std_rank                   folds=3  mean_coef=+0.0017
+   H3K27ac_H3K27me3_interaction              folds=3  mean_coef=-0.0015
+   H3K4me3_tss_entropy                       folds=3  mean_coef=+0.0012
+   DNase_H3K4me1_interaction                 folds=3  mean_coef=+0.0011
+   H3K4me3_tss_autocorr_rank                 folds=3  mean_coef=+0.0010
+   H3K27ac_promoter_body_delta               folds=3  mean_coef=+0.0009
+   H3K27ac_tss_entropy                       folds=3  mean_coef=-0.0008
+   H3K9me3_gene_autocorr_rank                folds=3  mean_coef=+0.0008
+   DNase_gene_slope                          folds=3  mean_coef=-0.0008
+   H3K27me3_gene_autocorr_rank               folds=3  mean_coef=+0.0007
+   H3K9me3_tss_entropy                       folds=3  mean_coef=-0.0007
+   H3K27ac_tss_z_min                         folds=3  mean_coef=+0.0007
+   H3K27ac_tss_autocorr                      folds=3  mean_coef=+0.0005
+   H3K27ac_ratio_mean_rank                   folds=3  mean_coef=+0.0005
+   H3K4me3_gene_entropy                      folds=3  mean_coef=+0.0004
+   DNase_tss_skewness                        folds=3  mean_coef=-0.0004
+   H3K36me3_gene_skewness_rank               folds=3  mean_coef=+0.0003
+   H3K27me3_tss_slope_rank                   folds=3  mean_coef=-0.0003
+   H3K9me3_ratio_mean                        folds=3  mean_coef=-0.0002
+   H3K36me3_tss_z_min                        folds=3  mean_coef=+0.0002
+   H3K4me3_tss_kurtosis                      folds=3  mean_coef=+0.0002
+   H3K9me3_ratio_std                         folds=3  mean_coef=-0.0001
+   H3K4me1_gene_slope                        folds=3  mean_coef=-0.0001
+   H3K27ac_ratio_mean                        folds=3  mean_coef=+0.0001
+   H3K9me3_tss_slope                         folds=2  mean_coef=-0.0006
+   H3K27me3_tss_entropy_rank                 folds=2  mean_coef=-0.0004
+   H3K4me3_tss_kurtosis_rank                 folds=2  mean_coef=-0.0004
+   H3K27me3_tss_entropy                      folds=2  mean_coef=+0.0003
+   H3K27ac_gene_z_std                        folds=2  mean_coef=+0.0003
+   DNase_ratio_std                           folds=2  mean_coef=-0.0003
+   H3K27me3_gene_skewness                    folds=2  mean_coef=-0.0003
+   H3K27ac_H3K4me1_interaction               folds=2  mean_coef=+0.0003
+   DNase_tss_z_min                           folds=2  mean_coef=-0.0003
+   H3K27ac_gene_slope_rank                   folds=2  mean_coef=-0.0003
+   H3K9me3_tss_entropy_rank                  folds=2  mean_coef=+0.0002
+   openness_index_rank                       folds=2  mean_coef=+0.0002
+   H3K27ac_tss_slope                         folds=2  mean_coef=-0.0002
+   H3K36me3_gene_autocorr_rank               folds=2  mean_coef=+0.0001
+   H3K27ac_gene_slope                        folds=2  mean_coef=+0.0001
+   H3K4me1_tss_kurtosis                      folds=2  mean_coef=-0.0001
+   H3K9me3_ratio_mean_rank                   folds=2  mean_coef=+0.0001
+   H3K36me3_gene_slope                       folds=2  mean_coef=+0.0001
+   H3K36me3_H3K4me1_interaction              folds=2  mean_coef=-0.0001
+   H3K4me1_gene_z_min                        folds=2  mean_coef=-0.0001
+   H3K27me3_H3K36me3_interaction             folds=2  mean_coef=-0.0000
+   H3K27me3_tss_z_mean_rank                  folds=1  mean_coef=-0.0008
+   H3K4me1_gene_slope_rank                   folds=1  mean_coef=-0.0005
+   H3K27me3_tss_skewness_rank                folds=1  mean_coef=+0.0003
+   H3K27me3_gene_kurtosis_rank               folds=1  mean_coef=-0.0003
+   H3K4me3_H3K9me3_interaction_rank          folds=1  mean_coef=+0.0003
+   H3K36me3_tss_entropy_rank                 folds=1  mean_coef=-0.0003
+   H3K4me3_tss_autocorr                      folds=1  mean_coef=+0.0002
+   H3K4me3_ratio_std_rank                    folds=1  mean_coef=+0.0002
+   H3K4me1_H3K9me3_interaction               folds=1  mean_coef=+0.0002
+   DNase_H3K36me3_interaction                folds=1  mean_coef=+0.0002
+   H3K4me3_H3K4me1_interaction               folds=1  mean_coef=-0.0001
+   H3K27me3_H3K9me3_interaction              folds=1  mean_coef=-0.0001
+   H3K27ac_tss_autocorr_rank                 folds=1  mean_coef=+0.0001
+   H3K27me3_gene_slope                       folds=1  mean_coef=+0.0001
+   H3K36me3_tss_slope                        folds=1  mean_coef=+0.0001
+   H3K4me1_gene_autocorr_rank                folds=1  mean_coef=-0.0001
+   promoter_entropy_rank                     folds=1  mean_coef=-0.0001
+   H3K36me3_tss_skewness_rank                folds=1  mean_coef=+0.0001
+   H3K4me3_gene_slope                        folds=1  mean_coef=+0.0001
+   H3K4me1_promoter_body_delta               folds=1  mean_coef=-0.0001
+   DNase_tss_slope                           folds=1  mean_coef=+0.0001
+   H3K36me3_tss_z_min_rank                   folds=1  mean_coef=-0.0001
+   H3K27me3_tss_autocorr                     folds=1  mean_coef=+0.0001
+   DNase_gene_kurtosis                       folds=1  mean_coef=-0.0001
+   DNase_gene_z_min_rank                     folds=1  mean_coef=+0.0001
+   H3K4me3_gene_entropy_rank                 folds=1  mean_coef=+0.0000
+   H3K9me3_gene_slope                        folds=1  mean_coef=+0.0000
+   DNase_H3K4me3_interaction                 folds=1  mean_coef=-0.0000
+   H3K4me3_gene_z_min                        folds=1  mean_coef=+0.0000
+   H3K9me3_gene_z_min_rank                   folds=1  mean_coef=+0.0000
+   H3K36me3_gene_skewness                    folds=1  mean_coef=+0.0000
+   H3K27me3_gene_kurtosis                    folds=1  mean_coef=-0.0000
+   H3K4me1_H3K9me3_interaction_rank          folds=1  mean_coef=-0.0000
+   H3K9me3_tss_z_min_rank                    folds=1  mean_coef=+0.0000
+   H3K36me3_tss_skewness                     folds=1  mean_coef=+0.0000
+   H3K36me3_H3K9me3_interaction_rank         folds=1  mean_coef=-0.0000
+   DNase_tss_z_min_rank                      folds=1  mean_coef=-0.0000

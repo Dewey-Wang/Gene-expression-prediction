@@ -1,0 +1,55 @@
+🚀 MLP Regression experiment started at 2025-10-14 13:03:25
+Feature count: 277
+🧩 Chromosome folds:
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/MLP/baseline\fold_1\mlp_model.pkl
+📈 Fold 1 Overall Spearman ρ = 0.5491
+   chr12 : ρ = 0.5739
+   chr17 : ρ = 0.5268
+   chr2  : ρ = 0.5664
+   chr22 : ρ = 0.5169
+   chr7  : ρ = 0.5420
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/MLP/baseline\fold_2\mlp_model.pkl
+📈 Fold 2 Overall Spearman ρ = 0.5859
+   chr13 : ρ = 0.5714
+   chr18 : ρ = 0.5731
+   chr3  : ρ = 0.6066
+   chr8  : ρ = 0.5621
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/MLP/baseline\fold_3\mlp_model.pkl
+📈 Fold 3 Overall Spearman ρ = 0.4545
+   chr14 : ρ = 0.4830
+   chr19 : ρ = 0.4430
+   chr4  : ρ = 0.5034
+   chr9  : ρ = 0.3889
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/MLP/baseline\fold_4\mlp_model.pkl
+📈 Fold 4 Overall Spearman ρ = 0.4486
+   chr10 : ρ = 0.4295
+   chr15 : ρ = 0.4484
+   chr20 : ρ = 0.4990
+   chr5  : ρ = 0.4305
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/MLP/baseline\fold_5\mlp_model.pkl
+📈 Fold 5 Overall Spearman ρ = 0.5562
+   chr11 : ρ = 0.5782
+   chr16 : ρ = 0.5288
+   chr21 : ρ = 0.5385
+   chr6  : ρ = 0.5363
+💾 Final predictions saved (predict_val.tsv)
+🌍 Overall validation Spearman (aligned) = 0.4903
+Mean Spearman (across folds): 0.5189
+Overall mean of per-chromosome means: 0.5165
+
+✅ MLP Regression experiment finished at 2025-10-14 13:04:24

@@ -1,0 +1,55 @@
+🚀 Lasso Regression experiment started at 2025-10-14 12:32:22
+Feature count: 277
+🧩 Chromosome folds:
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/linear_models/model_setting/v1_Lasso_X2_X1\fold_1\lasso_model.pkl
+📈 Fold 1 Overall Spearman ρ = 0.7322
+   chr12 : ρ = 0.7428
+   chr17 : ρ = 0.7163
+   chr2  : ρ = 0.7293
+   chr22 : ρ = 0.7571
+   chr7  : ρ = 0.7292
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/linear_models/model_setting/v1_Lasso_X2_X1\fold_2\lasso_model.pkl
+📈 Fold 2 Overall Spearman ρ = 0.7430
+   chr13 : ρ = 0.7029
+   chr18 : ρ = 0.7264
+   chr3  : ρ = 0.7544
+   chr8  : ρ = 0.7481
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/linear_models/model_setting/v1_Lasso_X2_X1\fold_3\lasso_model.pkl
+📈 Fold 3 Overall Spearman ρ = 0.7487
+   chr14 : ρ = 0.7826
+   chr19 : ρ = 0.7493
+   chr4  : ρ = 0.7334
+   chr9  : ρ = 0.7144
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/linear_models/model_setting/v1_Lasso_X2_X1\fold_4\lasso_model.pkl
+📈 Fold 4 Overall Spearman ρ = 0.7397
+   chr10 : ρ = 0.7324
+   chr15 : ρ = 0.7640
+   chr20 : ρ = 0.7344
+   chr5  : ρ = 0.7360
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/linear_models/model_setting/v1_Lasso_X2_X1\fold_5\lasso_model.pkl
+📈 Fold 5 Overall Spearman ρ = 0.7334
+   chr11 : ρ = 0.7270
+   chr16 : ρ = 0.7171
+   chr21 : ρ = 0.7107
+   chr6  : ρ = 0.7411
+💾 Final predictions saved (predict_val.tsv)
+🌍 Overall validation Spearman (aligned) = 0.7387
+Mean Spearman (across folds): 0.7394
+Overall mean of per-chromosome means: 0.7356
+
+✅ Lasso Regression experiment finished at 2025-10-14 12:33:09

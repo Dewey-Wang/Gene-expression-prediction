@@ -1,0 +1,23 @@
+🚀 FT-Transformer Regression experiment started at 2025-10-14 14:04:48
+Feature count: 277
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Epoch 0000 | Train=0.38701, Val=0.06646
+Epoch 0050 | Train=0.04903, Val=0.03833
+Epoch 0100 | Train=0.04638, Val=0.03758
+⏸️ Early stopping at epoch 127
+📈 Fold 1 Overall Spearman ρ = 0.6527
+   chr12 : ρ = 0.6593
+   chr17 : ρ = 0.6271
+   chr2  : ρ = 0.6461
+   chr22 : ρ = 0.6752
+   chr7  : ρ = 0.6735
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+Epoch 0000 | Train=0.26929, Val=0.06417
+Epoch 0050 | Train=0.04764, Val=0.03593

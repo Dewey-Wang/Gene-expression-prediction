@@ -1,0 +1,62 @@
+🚀 PyTorch MLP Regression experiment started at 2025-10-14 13:25:09
+Feature count: 277
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Epoch 0000 | Train=0.04128, Val=0.02823
+Epoch 0050 | Train=0.00578, Val=0.03189
+⏸️ Early stopping at epoch 53
+📈 Fold 1 Overall Spearman ρ = 0.7478
+   chr12 : ρ = 0.7531
+   chr17 : ρ = 0.7348
+   chr2  : ρ = 0.7422
+   chr22 : ρ = 0.7711
+   chr7  : ρ = 0.7514
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+Epoch 0000 | Train=0.05213, Val=0.02667
+Epoch 0050 | Train=0.00670, Val=0.03134
+⏸️ Early stopping at epoch 57
+📈 Fold 2 Overall Spearman ρ = 0.7461
+   chr13 : ρ = 0.6785
+   chr18 : ρ = 0.7327
+   chr3  : ρ = 0.7602
+   chr8  : ρ = 0.7536
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+Epoch 0000 | Train=0.04368, Val=0.02666
+Epoch 0050 | Train=0.00639, Val=0.03044
+⏸️ Early stopping at epoch 54
+📈 Fold 3 Overall Spearman ρ = 0.7626
+   chr14 : ρ = 0.7838
+   chr19 : ρ = 0.7655
+   chr4  : ρ = 0.7609
+   chr9  : ρ = 0.7311
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+Epoch 0000 | Train=0.05079, Val=0.02907
+Epoch 0050 | Train=0.00620, Val=0.03411
+⏸️ Early stopping at epoch 53
+📈 Fold 4 Overall Spearman ρ = 0.7571
+   chr10 : ρ = 0.7571
+   chr15 : ρ = 0.7780
+   chr20 : ρ = 0.7514
+   chr5  : ρ = 0.7485
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+Epoch 0000 | Train=0.05751, Val=0.02827
+Epoch 0050 | Train=0.00675, Val=0.03336
+⏸️ Early stopping at epoch 57
+📈 Fold 5 Overall Spearman ρ = 0.7473
+   chr11 : ρ = 0.7494
+   chr16 : ρ = 0.7277
+   chr21 : ρ = 0.7128
+   chr6  : ρ = 0.7527
+💾 Final predictions saved (predict_val.tsv)
+🌍 Mean Spearman across folds = 0.7522
+
+✅ PyTorch MLP Regression experiment finished at 2025-10-14 13:27:36
