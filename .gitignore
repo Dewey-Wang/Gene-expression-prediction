@@ -229,3 +229,7 @@ preprocessed_data/CAGE-merged/3. add features engineer/X1_all_rank_features.tsv
 preprocessed_data/CAGE-merged/3. add features engineer/X2_all_rank_features.tsv
 preprocessed_data/CAGE-merged/6. merged_with_bed/X1_all_features_with_bed.tsv
 preprocessed_data/CAGE-merged/6. merged_with_bed/X2_all_features_with_bed.tsv
+preprocessed_data/reference/1. normalized_bigwig/X1_zscore_dynamics.tsv
+.gitignore
+preprocessed_data/reference/1. normalized_bigwig/X3_zscore_dynamics.tsv
+preprocessed_data/reference/1. normalized_bigwig/X2_zscore_dynamics.tsv
