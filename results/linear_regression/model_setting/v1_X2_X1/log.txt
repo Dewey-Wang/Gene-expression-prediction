@@ -1,0 +1,55 @@
+🚀 Linear Regression experiment started at 2025-10-14 12:06:06
+Feature count: 277
+🧩 Chromosome folds:
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/linear_regression/model_setting/v1_X2_X1\fold_1\linear_model.pkl
+📈 Fold 1 Overall Spearman ρ = 0.0748
+   chr12 : ρ = 0.0636
+   chr17 : ρ = 0.0664
+   chr2  : ρ = 0.0296
+   chr22 : ρ = 0.0951
+   chr7  : ρ = 0.1624
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/linear_regression/model_setting/v1_X2_X1\fold_2\linear_model.pkl
+📈 Fold 2 Overall Spearman ρ = 0.0506
+   chr13 : ρ = -0.0485
+   chr18 : ρ = 0.0749
+   chr3  : ρ = 0.0634
+   chr8  : ρ = 0.0629
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/linear_regression/model_setting/v1_X2_X1\fold_3\linear_model.pkl
+📈 Fold 3 Overall Spearman ρ = 0.1300
+   chr14 : ρ = 0.1170
+   chr19 : ρ = 0.1255
+   chr4  : ρ = 0.1198
+   chr9  : ρ = 0.1659
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/linear_regression/model_setting/v1_X2_X1\fold_4\linear_model.pkl
+📈 Fold 4 Overall Spearman ρ = 0.0213
+   chr10 : ρ = -0.0027
+   chr15 : ρ = 0.0480
+   chr20 : ρ = 0.0896
+   chr5  : ρ = -0.0290
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/linear_regression/model_setting/v1_X2_X1\fold_5\linear_model.pkl
+📈 Fold 5 Overall Spearman ρ = -0.1429
+   chr11 : ρ = -0.1562
+   chr16 : ρ = -0.1312
+   chr21 : ρ = -0.1021
+   chr6  : ρ = -0.1113
+💾 Final predictions saved (predict_val.tsv)
+🌍 Overall validation Spearman (aligned) = 0.0263
+Mean Spearman (across folds): 0.0267
+Overall mean of per-chromosome means: 0.0335
+
+✅ Linear Regression experiment finished at 2025-10-14 12:06:10
