@@ -1,6 +1,6 @@
 {
-    "train_path": "../preprocessed_data/CAGE-merged/4. features selection/X2_all_rank_features_pruned.tsv",
-    "val_path": "../preprocessed_data/CAGE-merged/4. features selection/X1_all_rank_features_pruned.tsv",
+    "train_path": "../preprocessed_data/CAGE-merged/4. features selection/X2_all_rank_features_pruned_qn.tsv",
+    "val_path": "../preprocessed_data/CAGE-merged/4. features selection/X1_all_rank_features_pruned_qn.tsv",
     "seed": 42,
     "model": "LinearRegression",
     "params": {
