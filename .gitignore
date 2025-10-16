@@ -262,3 +262,6 @@ preprocessed_data/reference/1. quantile_normalized/bed/X2_bed_qn.tsv
 preprocessed_data/reference/0. data/bed/*.tsv
 preprocessed_data/reference/0. data/bigwig/*.tsv
 preprocessed_data/reference/1. merged data/without_y/*.tsv
+
+# big data
+preprocessed_data/reference/1. merged data/with_y/*.tsv
