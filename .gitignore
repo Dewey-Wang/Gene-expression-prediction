@@ -259,9 +259,10 @@ preprocessed_data/reference/1. quantile_normalized/X3_all_features_with_bed_prun
 preprocessed_data/reference/1. quantile_normalized/X3_all_qn.tsv
 preprocessed_data/reference/1. quantile_normalized/X3_all_rank_features.tsv
 preprocessed_data/reference/1. quantile_normalized/bed/X2_bed_qn.tsv
-preprocessed_data/reference/0. data/bed/*.tsv
-preprocessed_data/reference/0. data/bigwig/*.tsv
+preprocessed_data/reference/0. data/**/*.tsv
 preprocessed_data/reference/1. merged data/without_y/*.tsv
 
 # big data
 preprocessed_data/reference/1. merged data/with_y/*.tsv
+preprocessed_data/reference/0. data/bed1000_one_side/X1_logzscore.tsv
+preprocessed_data/reference/1. merged data/**/*.tsv
