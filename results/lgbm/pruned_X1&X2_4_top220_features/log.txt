@@ -1,0 +1,62 @@
+🚀 Experiment started at 2025-10-13 23:04:04
+Experiment directory: ../results/lgbm/pruned_X1&X2_4_top220_features
+Feature count: 220
+🧩 Chromosome folds:
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/pruned_X1&X2_4_top220_features/fold_1/model.pkl
+📈 Fold 1 Overall Spearman ρ = 0.7593
+📊 Per-Chromosome Spearman:
+   chr12 : ρ = 0.7730
+   chr17 : ρ = 0.7524
+   chr2  : ρ = 0.7558
+   chr22 : ρ = 0.7351
+   chr7  : ρ = 0.7653
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/pruned_X1&X2_4_top220_features/fold_2/model.pkl
+📈 Fold 2 Overall Spearman ρ = 0.7620
+📊 Per-Chromosome Spearman:
+   chr13 : ρ = 0.6908
+   chr18 : ρ = 0.7732
+   chr3  : ρ = 0.7789
+   chr8  : ρ = 0.7568
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/pruned_X1&X2_4_top220_features/fold_3/model.pkl
+📈 Fold 3 Overall Spearman ρ = 0.7507
+📊 Per-Chromosome Spearman:
+   chr14 : ρ = 0.7601
+   chr19 : ρ = 0.7351
+   chr4  : ρ = 0.7540
+   chr9  : ρ = 0.7545
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/pruned_X1&X2_4_top220_features/fold_4/model.pkl
+📈 Fold 4 Overall Spearman ρ = 0.7596
+📊 Per-Chromosome Spearman:
+   chr10 : ρ = 0.7451
+   chr15 : ρ = 0.7649
+   chr20 : ρ = 0.7402
+   chr5  : ρ = 0.7821
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/pruned_X1&X2_4_top220_features/fold_5/model.pkl
+📈 Fold 5 Overall Spearman ρ = 0.7514
+📊 Per-Chromosome Spearman:
+   chr11 : ρ = 0.7748
+   chr16 : ρ = 0.7324
+   chr21 : ρ = 0.7308
+   chr6  : ρ = 0.7261
+💾 Final predictions (aligned) saved (predict_val.tsv)
+🌍 Overall validation Spearman (aligned) = 0.7536
+💾 Summary saved (summary.tsv)
+Mean Spearman (across folds): 0.7566
+Overall mean of per-chromosome means: 0.7515
+
+✅ Experiment finished at 2025-10-13 23:04:16

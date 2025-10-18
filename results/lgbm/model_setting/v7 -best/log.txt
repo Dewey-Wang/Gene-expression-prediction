@@ -1,0 +1,61 @@
+🚀 Experiment started at 2025-10-14 03:18:04
+Experiment directory: ../results/lgbm/model_setting/v7
+Feature count: 277
+🧩 Chromosome folds:
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/model_setting/v7/fold_1/model.pkl
+📈 Fold 1 Overall Spearman ρ = 0.7656
+📊 Per-Chromosome Spearman:
+   chr12 : ρ = 0.7790
+   chr17 : ρ = 0.7591
+   chr2  : ρ = 0.7614
+   chr22 : ρ = 0.7491
+   chr7  : ρ = 0.7696
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/model_setting/v7/fold_2/model.pkl
+📈 Fold 2 Overall Spearman ρ = 0.7704
+📊 Per-Chromosome Spearman:
+   chr13 : ρ = 0.7210
+   chr18 : ρ = 0.7788
+   chr3  : ρ = 0.7810
+   chr8  : ρ = 0.7661
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/model_setting/v7/fold_3/model.pkl
+📈 Fold 3 Overall Spearman ρ = 0.7619
+📊 Per-Chromosome Spearman:
+   chr14 : ρ = 0.7774
+   chr19 : ρ = 0.7401
+   chr4  : ρ = 0.7709
+   chr9  : ρ = 0.7667
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/model_setting/v7/fold_4/model.pkl
+📈 Fold 4 Overall Spearman ρ = 0.7676
+📊 Per-Chromosome Spearman:
+   chr10 : ρ = 0.7582
+   chr15 : ρ = 0.7740
+   chr20 : ρ = 0.7513
+   chr5  : ρ = 0.7851
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/model_setting/v7/fold_5/model.pkl
+📈 Fold 5 Overall Spearman ρ = 0.7575
+📊 Per-Chromosome Spearman:
+   chr11 : ρ = 0.7800
+   chr16 : ρ = 0.7394
+   chr21 : ρ = 0.7326
+   chr6  : ρ = 0.7330
+💾 Final predictions (aligned) saved (predict_val.tsv)
+🌍 Overall validation Spearman (aligned) = 0.7645
+Mean Spearman (across folds): 0.7646
+Overall mean of per-chromosome means: 0.7607
+
+✅ Experiment finished at 2025-10-14 03:18:32

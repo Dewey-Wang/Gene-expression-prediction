@@ -1,0 +1,53 @@
+{
+    "train_path": "../preprocessed_data/reference/2. features_engineered_selected/X1_all_features_with_bed_pruned_and_y.tsv",
+    "val_path": "../preprocessed_data/reference/2. features_engineered_selected/X2_all_features_with_bed_pruned_and_y.tsv",
+    "seed": 42,
+    "params": {
+        "verbose": -1,
+        "boosting_type": "gbdt",
+        "learning_rate": 0.016676974956976915,
+        "num_leaves": 48,
+        "max_depth": 8,
+        "feature_fraction": 0.64561553423692,
+        "bagging_fraction": 0.8113835038425429,
+        "bagging_freq": 6,
+        "lambda_l1": 0.3316673054635859,
+        "lambda_l2": 0.8969317795206216,
+        "min_gain_to_split": 0.04923442843722911,
+        "min_data_in_leaf": 38
+    },
+    "folds": [
+        [
+            "chr2",
+            "chr7",
+            "chr12",
+            "chr17",
+            "chr22"
+        ],
+        [
+            "chr3",
+            "chr8",
+            "chr13",
+            "chr18"
+        ],
+        [
+            "chr4",
+            "chr9",
+            "chr14",
+            "chr19"
+        ],
+        [
+            "chr5",
+            "chr10",
+            "chr15",
+            "chr20"
+        ],
+        [
+            "chr6",
+            "chr11",
+            "chr16",
+            "chr21"
+        ]
+    ],
+    "target_col": "rank_global"
+}

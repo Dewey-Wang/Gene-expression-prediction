@@ -1,0 +1,510 @@
+==== Leave-One-Chromosome-Out Experiment ====
+📚 Loaded data with 21 chromosomes.
+Feature count: 277
+
+🧪 Outer Loop → Test chromosome: chr2
+Inner folds (5-fold over 20 chr): [['chr3', 'chr8', 'chr13', 'chr18'], ['chr4', 'chr9', 'chr14', 'chr19'], ['chr5', 'chr10', 'chr15', 'chr20'], ['chr6', 'chr11', 'chr16', 'chr21'], ['chr7', 'chr12', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr2/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7779
+
+🚀 Fold 2/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr2/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7834
+
+🚀 Fold 3/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr2/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7751
+
+🚀 Fold 4/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr2/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7616
+
+🚀 Fold 5/5 | Val chromosomes: ['chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr2/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7725
+🌍 Test chromosome chr2: Spearman ρ = 0.7569
+
+🧪 Outer Loop → Test chromosome: chr3
+Inner folds (5-fold over 20 chr): [['chr2', 'chr8', 'chr13', 'chr18'], ['chr4', 'chr9', 'chr14', 'chr19'], ['chr5', 'chr10', 'chr15', 'chr20'], ['chr6', 'chr11', 'chr16', 'chr21'], ['chr7', 'chr12', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr3/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7577
+
+🚀 Fold 2/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr3/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7813
+
+🚀 Fold 3/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr3/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7755
+
+🚀 Fold 4/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr3/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7608
+
+🚀 Fold 5/5 | Val chromosomes: ['chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr3/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7702
+🌍 Test chromosome chr3: Spearman ρ = 0.7788
+
+🧪 Outer Loop → Test chromosome: chr4
+Inner folds (5-fold over 20 chr): [['chr2', 'chr8', 'chr13', 'chr18'], ['chr3', 'chr9', 'chr14', 'chr19'], ['chr5', 'chr10', 'chr15', 'chr20'], ['chr6', 'chr11', 'chr16', 'chr21'], ['chr7', 'chr12', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr4/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7600
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr4/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7851
+
+🚀 Fold 3/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr4/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7752
+
+🚀 Fold 4/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr4/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7615
+
+🚀 Fold 5/5 | Val chromosomes: ['chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr4/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7709
+🌍 Test chromosome chr4: Spearman ρ = 0.7648
+
+🧪 Outer Loop → Test chromosome: chr5
+Inner folds (5-fold over 20 chr): [['chr2', 'chr8', 'chr13', 'chr18'], ['chr3', 'chr9', 'chr14', 'chr19'], ['chr4', 'chr10', 'chr15', 'chr20'], ['chr6', 'chr11', 'chr16', 'chr21'], ['chr7', 'chr12', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr5/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7591
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr5/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7872
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr5/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7778
+
+🚀 Fold 4/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr5/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7599
+
+🚀 Fold 5/5 | Val chromosomes: ['chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr5/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7712
+🌍 Test chromosome chr5: Spearman ρ = 0.7815
+
+🧪 Outer Loop → Test chromosome: chr6
+Inner folds (5-fold over 20 chr): [['chr2', 'chr8', 'chr13', 'chr18'], ['chr3', 'chr9', 'chr14', 'chr19'], ['chr4', 'chr10', 'chr15', 'chr20'], ['chr5', 'chr11', 'chr16', 'chr21'], ['chr7', 'chr12', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr6/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7604
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr6/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7876
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr6/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7767
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr6/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7628
+
+🚀 Fold 5/5 | Val chromosomes: ['chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr6/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7721
+🌍 Test chromosome chr6: Spearman ρ = 0.7382
+
+🧪 Outer Loop → Test chromosome: chr7
+Inner folds (5-fold over 20 chr): [['chr2', 'chr8', 'chr13', 'chr18'], ['chr3', 'chr9', 'chr14', 'chr19'], ['chr4', 'chr10', 'chr15', 'chr20'], ['chr5', 'chr11', 'chr16', 'chr21'], ['chr6', 'chr12', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr7/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7596
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr7/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7855
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr7/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7785
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr7/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7631
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr7/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7667
+🌍 Test chromosome chr7: Spearman ρ = 0.7682
+
+🧪 Outer Loop → Test chromosome: chr8
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr13', 'chr18'], ['chr3', 'chr9', 'chr14', 'chr19'], ['chr4', 'chr10', 'chr15', 'chr20'], ['chr5', 'chr11', 'chr16', 'chr21'], ['chr6', 'chr12', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr8/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7619
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr8/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7866
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr8/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7784
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr8/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7640
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr8/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7688
+🌍 Test chromosome chr8: Spearman ρ = 0.7629
+
+🧪 Outer Loop → Test chromosome: chr9
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr13', 'chr18'], ['chr3', 'chr8', 'chr14', 'chr19'], ['chr4', 'chr10', 'chr15', 'chr20'], ['chr5', 'chr11', 'chr16', 'chr21'], ['chr6', 'chr12', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr9/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7600
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr9/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7888
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr9/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7785
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr9/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7625
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr9/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7696
+🌍 Test chromosome chr9: Spearman ρ = 0.7618
+
+🧪 Outer Loop → Test chromosome: chr10
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr13', 'chr18'], ['chr3', 'chr8', 'chr14', 'chr19'], ['chr4', 'chr9', 'chr15', 'chr20'], ['chr5', 'chr11', 'chr16', 'chr21'], ['chr6', 'chr12', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr10/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7615
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr10/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7881
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr10/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7750
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr10/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7621
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr10/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7682
+🌍 Test chromosome chr10: Spearman ρ = 0.7509
+
+🧪 Outer Loop → Test chromosome: chr11
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr13', 'chr18'], ['chr3', 'chr8', 'chr14', 'chr19'], ['chr4', 'chr9', 'chr15', 'chr20'], ['chr5', 'chr10', 'chr16', 'chr21'], ['chr6', 'chr12', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr11/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7597
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr11/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7869
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr11/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7752
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr11/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7619
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr11/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7679
+🌍 Test chromosome chr11: Spearman ρ = 0.7794
+
+🧪 Outer Loop → Test chromosome: chr12
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr13', 'chr18'], ['chr3', 'chr8', 'chr14', 'chr19'], ['chr4', 'chr9', 'chr15', 'chr20'], ['chr5', 'chr10', 'chr16', 'chr21'], ['chr6', 'chr11', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr12/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7582
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr12/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7881
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr12/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7759
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr12/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7631
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr12/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7680
+🌍 Test chromosome chr12: Spearman ρ = 0.7812
+
+🧪 Outer Loop → Test chromosome: chr13
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr12', 'chr18'], ['chr3', 'chr8', 'chr14', 'chr19'], ['chr4', 'chr9', 'chr15', 'chr20'], ['chr5', 'chr10', 'chr16', 'chr21'], ['chr6', 'chr11', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr13/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7664
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr13/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7906
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr13/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7739
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr13/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7630
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr13/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7697
+🌍 Test chromosome chr13: Spearman ρ = 0.7071
+
+🧪 Outer Loop → Test chromosome: chr14
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr12', 'chr18'], ['chr3', 'chr8', 'chr13', 'chr19'], ['chr4', 'chr9', 'chr15', 'chr20'], ['chr5', 'chr10', 'chr16', 'chr21'], ['chr6', 'chr11', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr14/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7675
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr14/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7824
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr14/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7786
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr14/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7642
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr14/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7692
+🌍 Test chromosome chr14: Spearman ρ = 0.7728
+
+🧪 Outer Loop → Test chromosome: chr15
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr12', 'chr18'], ['chr3', 'chr8', 'chr13', 'chr19'], ['chr4', 'chr9', 'chr14', 'chr20'], ['chr5', 'chr10', 'chr16', 'chr21'], ['chr6', 'chr11', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr15/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7689
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr15/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7820
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr15/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7835
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr15/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7643
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr15/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7680
+🌍 Test chromosome chr15: Spearman ρ = 0.7752
+
+🧪 Outer Loop → Test chromosome: chr16
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr12', 'chr18'], ['chr3', 'chr8', 'chr13', 'chr19'], ['chr4', 'chr9', 'chr14', 'chr20'], ['chr5', 'chr10', 'chr15', 'chr21'], ['chr6', 'chr11', 'chr17', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr16/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7677
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr16/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7794
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr16/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7820
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr16/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7782
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr16/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7684
+🌍 Test chromosome chr16: Spearman ρ = 0.7362
+
+🧪 Outer Loop → Test chromosome: chr17
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr12', 'chr18'], ['chr3', 'chr8', 'chr13', 'chr19'], ['chr4', 'chr9', 'chr14', 'chr20'], ['chr5', 'chr10', 'chr15', 'chr21'], ['chr6', 'chr11', 'chr16', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr17/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7672
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr17/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7831
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr17/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7786
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr17/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7762
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr17/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7660
+🌍 Test chromosome chr17: Spearman ρ = 0.7610
+
+🧪 Outer Loop → Test chromosome: chr18
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr12', 'chr17'], ['chr3', 'chr8', 'chr13', 'chr19'], ['chr4', 'chr9', 'chr14', 'chr20'], ['chr5', 'chr10', 'chr15', 'chr21'], ['chr6', 'chr11', 'chr16', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr18/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7659
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr18/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7809
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr18/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7786
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr18/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7776
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr18/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7659
+🌍 Test chromosome chr18: Spearman ρ = 0.7803
+
+🧪 Outer Loop → Test chromosome: chr19
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr12', 'chr17'], ['chr3', 'chr8', 'chr13', 'chr18'], ['chr4', 'chr9', 'chr14', 'chr20'], ['chr5', 'chr10', 'chr15', 'chr21'], ['chr6', 'chr11', 'chr16', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr19/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7651
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr19/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7766
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr19/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7789
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr19/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7761
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr19/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7644
+🌍 Test chromosome chr19: Spearman ρ = 0.7367
+
+🧪 Outer Loop → Test chromosome: chr20
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr12', 'chr17'], ['chr3', 'chr8', 'chr13', 'chr18'], ['chr4', 'chr9', 'chr14', 'chr19'], ['chr5', 'chr10', 'chr15', 'chr21'], ['chr6', 'chr11', 'chr16', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr20/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7664
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr20/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7775
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr20/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7821
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr20/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7780
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr20/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7660
+🌍 Test chromosome chr20: Spearman ρ = 0.7507
+
+🧪 Outer Loop → Test chromosome: chr21
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr12', 'chr17'], ['chr3', 'chr8', 'chr13', 'chr18'], ['chr4', 'chr9', 'chr14', 'chr19'], ['chr5', 'chr10', 'chr15', 'chr20'], ['chr6', 'chr11', 'chr16', 'chr22']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr21/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7642
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr21/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7755
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr21/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7838
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr21/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7760
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr22']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr21/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7664
+🌍 Test chromosome chr21: Spearman ρ = 0.7357
+
+🧪 Outer Loop → Test chromosome: chr22
+Inner folds (5-fold over 20 chr): [['chr2', 'chr7', 'chr12', 'chr17'], ['chr3', 'chr8', 'chr13', 'chr18'], ['chr4', 'chr9', 'chr14', 'chr19'], ['chr5', 'chr10', 'chr15', 'chr20'], ['chr6', 'chr11', 'chr16', 'chr21']]
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr22/fold_1/model.pkl
+📈 Fold 1 inner val Spearman = 0.7666
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr22/fold_2/model.pkl
+📈 Fold 2 inner val Spearman = 0.7769
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr22/fold_3/model.pkl
+📈 Fold 3 inner val Spearman = 0.7840
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr22/fold_4/model.pkl
+📈 Fold 4 inner val Spearman = 0.7789
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/leave_one_chr/test_chr22/fold_5/model.pkl
+📈 Fold 5 inner val Spearman = 0.7627
+🌍 Test chromosome chr22: Spearman ρ = 0.7461
+
+✅ Overall mean Spearman across 21 test chromosomes: 0.7584
+Experiment completed at 2025-10-14 00:14:12

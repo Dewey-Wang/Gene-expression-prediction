@@ -1,0 +1,57 @@
+🚀 Experiment started at 2025-10-16 01:22:47
+Experiment directory: ../results/lgbm/reference/logzscore_logzscore/
+Feature count: 672
+🧩 Chromosome folds:
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/reference/logzscore_logzscore/fold_1/model.pkl
+📈 Fold 1 Spearman ρ (global) = 0.7701
+📊 Per-Chromosome Spearman (vs rank_global):
+   chr12 : ρ = 0.7808
+   chr17 : ρ = 0.7667
+   chr2  : ρ = 0.7539
+   chr22 : ρ = 0.7587
+   chr7  : ρ = 0.7872
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/reference/logzscore_logzscore/fold_2/model.pkl
+📈 Fold 2 Spearman ρ (global) = 0.7909
+📊 Per-Chromosome Spearman (vs rank_global):
+   chr13 : ρ = 0.7354
+   chr18 : ρ = 0.8034
+   chr3  : ρ = 0.7996
+   chr8  : ρ = 0.7915
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
+💾 Model saved: ../results/lgbm/reference/logzscore_logzscore/fold_3/model.pkl
+📈 Fold 3 Spearman ρ (global) = 0.7838
+📊 Per-Chromosome Spearman (vs rank_global):
+   chr14 : ρ = 0.7947
+   chr19 : ρ = 0.7747
+   chr4  : ρ = 0.7818
+   chr9  : ρ = 0.7801
+
+🚀 Fold 4/5 | Val chromosomes: ['chr5', 'chr10', 'chr15', 'chr20']
+💾 Model saved: ../results/lgbm/reference/logzscore_logzscore/fold_4/model.pkl
+📈 Fold 4 Spearman ρ (global) = 0.7934
+📊 Per-Chromosome Spearman (vs rank_global):
+   chr10 : ρ = 0.7757
+   chr15 : ρ = 0.8037
+   chr20 : ρ = 0.7760
+   chr5  : ρ = 0.8090
+
+🚀 Fold 5/5 | Val chromosomes: ['chr6', 'chr11', 'chr16', 'chr21']
+💾 Model saved: ../results/lgbm/reference/logzscore_logzscore/fold_5/model.pkl
+📈 Fold 5 Spearman ρ (global) = 0.7696
+📊 Per-Chromosome Spearman (vs rank_global):
+   chr11 : ρ = 0.7924
+   chr16 : ρ = 0.7298
+   chr21 : ρ = 0.7218
+   chr6  : ρ = 0.7646
+💾 Final predictions (aligned) saved (predict_val.tsv)
+🌍 Overall validation Spearman (aligned) = 0.7791
