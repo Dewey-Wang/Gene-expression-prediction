@@ -162,6 +162,8 @@ According to the top important features, we could see that the model focuses on 
 
 ## 📜 License
 
+This project is licensed under **CC BY-NC 4.0** (non-commercial, attribution required).  
+
 * **Non-commercial use only.** Any commercial use is **prohibited** without prior written permission.
 
 * **Citation required.** If you use this code or derived results in academic work, please **cite this repository**:
