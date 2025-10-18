@@ -1,0 +1,30 @@
+🚀 Experiment started at 2025-10-13 22:27:52
+Experiment directory: ../results/lgbm/all_rank_features
+Feature count: 456
+🧩 Chromosome folds:
+Fold 1: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+Fold 2: ['chr3', 'chr8', 'chr13', 'chr18']
+Fold 3: ['chr4', 'chr9', 'chr14', 'chr19']
+Fold 4: ['chr5', 'chr10', 'chr15', 'chr20']
+Fold 5: ['chr6', 'chr11', 'chr16', 'chr21']
+
+🚀 Fold 1/5 | Val chromosomes: ['chr2', 'chr7', 'chr12', 'chr17', 'chr22']
+💾 Model saved: ../results/lgbm/all_rank_features/fold_1/model.pkl
+📈 Fold 1 Overall Spearman ρ = 0.7468
+📊 Per-Chromosome Spearman:
+   chr12 : ρ = 0.7557
+   chr17 : ρ = 0.7452
+   chr2  : ρ = 0.7338
+   chr22 : ρ = 0.7400
+   chr7  : ρ = 0.7587
+
+🚀 Fold 2/5 | Val chromosomes: ['chr3', 'chr8', 'chr13', 'chr18']
+💾 Model saved: ../results/lgbm/all_rank_features/fold_2/model.pkl
+📈 Fold 2 Overall Spearman ρ = 0.7545
+📊 Per-Chromosome Spearman:
+   chr13 : ρ = 0.6957
+   chr18 : ρ = 0.7658
+   chr3  : ρ = 0.7588
+   chr8  : ρ = 0.7610
+
+🚀 Fold 3/5 | Val chromosomes: ['chr4', 'chr9', 'chr14', 'chr19']
