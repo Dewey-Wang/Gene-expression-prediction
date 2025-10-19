@@ -1,6 +1,6 @@
 {
-    "train_path": "../preprocessed_data/reference/1. merged data/with_y_100_one_side/X2_all_rank_features_with_y.tsv",
-    "test_path": "../preprocessed_data/reference/1. merged data/with_y_100_one_side/X1_all_rank_features_with_y.tsv",
+    "train_path": "../preprocessed_data/reference/1. merged data/with_y_100_one_side/X1_all_rank_features_with_y.tsv",
+    "test_path": "../preprocessed_data/reference/1. merged data/with_y_100_one_side/X2_all_rank_features_with_y.tsv",
     "unlabeled_test_path": "../preprocessed_data/reference/1. merged data/with_y_100_one_side/X3_test.tsv",
     "features_path": "./top_features_shap/selected_union_features.tsv",
     "target_col": "gex_rank",

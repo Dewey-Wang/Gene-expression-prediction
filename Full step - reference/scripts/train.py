@@ -1,3 +1,8 @@
+# file: utils/aggregate_gex_predicted.py
+from __future__ import annotations
+
+
+from typing import List, Optional
 import os
 import random
 import pandas as pd
@@ -8,9 +13,6 @@ from datetime import datetime
 import json
 
 
-# ============================================================
-# FUNCTION: Leave-one-chr + Inner KFold + Unlabeled Test
-# ============================================================
 def run_leaveonechr_with_innerkfold(
     train_path,
     test_path,
@@ -74,7 +76,11 @@ def run_leaveonechr_with_innerkfold(
     # Add binary labels
     df_train_full[target_binary] = (df_train_full["gex"] > 0).astype(int)
     df_test_full[target_binary] = (df_test_full["gex"] > 0).astype(int)
-
+    if meta_cols is None:
+        meta_cols = [
+                        "gene_name", "chr", "gene_start", "gene_end",
+                        "TSS_start", "TSS_end", "strand", "gex", "gex_rank"
+                    ]
     # === Load features ===
     if features_path and os.path.exists(features_path):
         feature_cols = pd.read_csv(features_path, sep="\t")["feature"].tolist()
@@ -136,7 +142,6 @@ def run_leaveonechr_with_innerkfold(
 
     chromosomes = [f"chr{i}" for i in range(2, 23)]
     log(f"Chromosomes: {chromosomes}")
-
     # ============================================================
     # OUTER LOOP (Leave-one-chromosome)
     # ============================================================
@@ -145,7 +150,7 @@ def run_leaveonechr_with_innerkfold(
 
         df_outer_val = df_train_full[df_train_full["chr"] == outer_chr].copy()
         df_outer_train = df_train_full[df_train_full["chr"] != outer_chr].copy()
-
+        
         inner_chrs = [c for c in chromosomes if c != outer_chr]
         inner_folds = [inner_chrs[i::n_inner_folds] for i in range(n_inner_folds)]
 
@@ -228,6 +233,26 @@ def run_leaveonechr_with_innerkfold(
             rho_test_masked = spearmanr(df_test_full[target_rank], reg_test * (prob_test >= THRESHOLD).astype(int))[0]
             log(f"     chr-kfold Test: ρ_nomask={rho_test_nomask:.4f}, ρ_masked={rho_test_masked:.4f}")
 
+             # Boolean mask for rows in test belonging to the current outer_chr
+            mask = (df_test_full["chr"].to_numpy() == outer_chr)
+
+            # If you prefer explicit indices instead of a boolean mask:
+            # idx = np.flatnonzero(mask)
+
+            # Subset ground-truth and predictions
+            y_sub    = df_test_full.loc[mask, target_rank].to_numpy()
+            reg_sub  = np.asarray(reg_test)[mask]        # same order as df_test_full
+            prob_sub = np.asarray(prob_test)[mask]
+
+            # Spearman on the subset
+            rho_test_nomask_outer = spearmanr(y_sub, reg_sub, nan_policy="omit")[0]
+            rho_test_masked_outer = spearmanr(
+                y_sub,
+                reg_sub * (prob_sub >= THRESHOLD).astype(int),
+                nan_policy="omit"
+            )[0]
+            log(f"     chr-kfold Test ONLY {outer_chr}: ρ_nomask={rho_test_nomask_outer:.4f}, ρ_masked={rho_test_masked_outer:.4f}")
+            
             # === Predict unlabeled ===
             if df_unlabeled_test is not None:
                 X_unlabeled = df_unlabeled_test[feature_cols]
@@ -260,14 +285,38 @@ def run_leaveonechr_with_innerkfold(
         )[0]
         test_pred_reg_chr.append(mean_reg_test)
         test_pred_prob_chr.append(mean_prob_test)
+        
+        # Boolean mask for rows in test belonging to the current outer_chr
+        mask = (df_test_full["chr"].to_numpy() == outer_chr)
+
+        # If you prefer explicit indices instead of a boolean mask:
+        # idx = np.flatnonzero(mask)
+
+        # Subset ground-truth and predictions
+        y_sub    = df_test_full.loc[mask, target_rank].to_numpy()
+        reg_sub  = np.asarray(mean_reg_test)[mask]        # same order as df_test_full
+        prob_sub = np.asarray(mean_prob_test)[mask]
+
+        # Spearman on the subset
+        rho_test_nomask_outer = spearmanr(y_sub, reg_sub, nan_policy="omit")[0]
+        rho_test_masked_outer = spearmanr(
+            y_sub,
+            reg_sub * (prob_sub >= THRESHOLD).astype(int),
+            nan_policy="omit"
+        )[0]
+
+
         outer_results.append({
             "outer_chr": outer_chr,
             "rho_outer_nomask": rho_outer_nomask,
             "rho_outer_masked": rho_outer_masked,
             "rho_all_test_nomask": rho_test_nomask,
-            "rho_all_test_masked": rho_test_masked
+            "rho_all_test_masked": rho_test_masked,
+            "rho_outer_test_nomask":rho_test_nomask_outer,
+            "rho_outer_test_masked":rho_test_masked_outer
         })
-        log(f"🧪 Test (all chr-kfold): ρ_nomask={rho_test_nomask:.4f}, ρ_masked={rho_test_masked:.4f}")
+        log(f"🧪 All chr in Test (all chr-kfold): ρ_nomask={rho_test_nomask:.4f}, ρ_masked={rho_test_masked:.4f}")
+        log(f"🧪 ONLY {outer_chr} in Test | ρ_nomask={rho_test_nomask_outer:.4f}, ρ_masked={rho_test_masked_outer:.4f}")
 
         # ========================================================
         # Aggregate Unlabeled
@@ -600,14 +649,6 @@ def run_lgbm_nested_training(
 
     return results_summary_df, results_inner_df, test_predictions_df, train_test_predictions_df
 
-
-# file: utils/aggregate_gex_predicted.py
-from __future__ import annotations
-
-import os
-import pandas as pd
-import numpy as np
-from typing import List, Optional
 
 def aggregate_gex_predicted(
     dirs: List[str],
