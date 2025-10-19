@@ -246,7 +246,7 @@ def select_bidirectional_top_features(
 
     return unique_features
 
-def get_high_corr_pairs(df, feature_cols, threshold=0.95, method="pearson"):
+def get_high_corr_pairs(df, feature_cols, threshold=0.99, method="pearson"):
     X = df[feature_cols]
     corr = X.corr(method=method)
     upper = corr.where(np.triu(np.ones(corr.shape), k=1).astype(bool))

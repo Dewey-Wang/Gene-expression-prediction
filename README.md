@@ -54,21 +54,24 @@ Implemented families (see `feature_engineer.py`):
 * TSS geometry: distances from TSS midpoint to gene boundaries (absolute and length-normalized)
 * Advanced chromatin: `(TSS−gene)/gene_length`, `(TSS−gene)/(TSS+gene)`, `H3K27ac_gene × H3K4me3_tss`, `H3K27ac × DNase` synergy/ratio, bivalency (K27ac vs K27me3), promoter–gene coherence (row-wise Pearson), entropy diversity
 * Cross-layer (BED × bigWig): `bw_mean/peak_density`, `bw_entropy − peak_entropy`, `peak_density × bw_mean`, bigWig promoter–gene balances
+**TL;DR:** I didn’t hard-code a “feature selection” list. I select features by **cross–cell-line SHAP**, keep the ones that are **important and stable in both directions (X1→X2 & X2→X1)**, then optionally **prune sparse & highly correlated** features.
 
-**Ablations (what worked best)**
+Here’s a clean README section you can paste:
 
-* BED + bigWig > bigWig-only > BED-only
+---
 
-| Both direction TSS | One direction TSS |
-|:----------:|:--------:|
-| <img src="Code%20submission/plot/compare%20training%20on%20diff%20dataset%28Both%20side%29.png" width="95%"/> | <img src="Code%20submission/plot/compare%20training%20on%20diff%20dataset%28one%20side%29.png" width="95%"/> |
+## 🧪 Feature Selection (cross–cell-line & robust)
 
-* TSS window: strand-aware one-sided outperforms symmetric both-sides. 100 bp is the sweet spot; performance drops beyond 100 bp (tested 50–5000 bp)
-  
-| Both VS one direction TSS | The size of TSS |
-|:-------------------------:|:---------------:|
-| <img src="Code%20submission/plot/tss%20windows%20chrom_kfold.png" width="420"/> | <img src="Code%20submission/plot/tss%20one%20side.png" width="435"/> |
+After building a large feature set from BED + bigWig, I select a subset of the features that **transfers across cell lines** (so it’s more likely to work on X3). I use **cross–cell-line SHAP** to rank features by importance and stability, then optionally prune redundancy.
 
+**How I select features**
+1. **Train across cells (directional):** Run X1→X2 and X2→X1 with chromosome-aware folds.
+2. **Compute SHAP per direction & task:** For both **binary** (non-zero) and **regression** (rank), compute mean |SHAP| on the validation splits.
+3. **Aggregate & stabilize:** Average SHAP across folds, then merge directions to score **stability** (features that stay important in both directions).
+4. **Take the union of top-N:** From binary + regression and both directions; de-duplicate while preserving order.
+5. **Optional pruning:**  
+   - **Sparsity filter:** drop features with very low non-zero rates across cells.  
+   - **Correlation filter:** identify highly correlated pairs and keep one representative.
 
 ---
 
@@ -89,15 +92,17 @@ I use **LightGBM (LGBM)** for both binary classification (is expression > 0?) an
 ### CV & Ensembling
 
 * LOCO outer loop + chr-based K-Fold inner loop
-* I train and stack three setups:
+* I train and stack five setups:
 
   1. X1+X2 pooled: mix X1+X2 for train/val
   2. X1-only: train/val on X1
   3. X2-only: train/val on X2
+  4. X1 cross cell line validation: train on X1, val on X2
+  5. X2 cross cell line validation: train on X2, val on X1
 * Stacking rule:
 
-  * final rank = mean of the 3 rank predictions
-  * final mask = mean classifier probability, thresholded at 0.40
+  * final rank = mean of the 5 rank predictions
+  * final mask = mean classifier probability (Here, I didn't use mix X1+X2 because it will make the performance worse. I wrote the reason in result.), thresholded at 0.40
   * final prediction = rank × mask
     (Union/interaction masks were tested; mean + 0.4 worked best)
     
@@ -118,13 +123,30 @@ I use **LightGBM (LGBM)** for both binary classification (is expression > 0?) an
 
 ## Results
 
-
 | Mask on unseen cell line | Mask on seen cell line|
 |:-------------------------:|:---------------:|
 | <img src="Code%20submission/plot/see%20mask%20on%20unseen%20cell%20line.png" width="490"/> | <img src="Code%20submission/plot/see%20mask%20on%20the%20same%20cell%20line.png" width="420"/> |
 
+The mask significantly improves predictions in most settings. One exception: when mixing X1+X2 to train models, masking can hurt. My hypothesis for Mixing X1 and X2 degrades the binary model: the model is forced toward a compromise between datasets with different noise profiles, which lowers performance.
 
-The mask significantly improves predictions in most settings. One exception: when mixing X1+X2 to train regression and binary models, masking can hurt, and the pooled regression is worse than single-cell-line training. My hypothesis: both models chase a compromise for noisier mixed data.
+As shown in the figure, the difference between cross– and within–cell-line validation is minimal, suggesting the model already learns the general pattern from a single cell line. Pooling cell lines adds heterogeneous noise, pushing the binary classifier toward a compromise solution and reducing performance.
+
+![Performance analysis cross vs within cell line](Code%20submission/plot/cross%20vs%20within%20cell%20line.png)
+
+### Ablations
+
+* BED + bigWig > bigWig-only > BED-only
+
+| Both direction TSS | One direction TSS |
+|:----------:|:--------:|
+| <img src="Code%20submission/plot/compare%20training%20on%20diff%20dataset%28Both%20side%29.png" width="95%"/> | <img src="Code%20submission/plot/compare%20training%20on%20diff%20dataset%28one%20side%29.png" width="95%"/> |
+
+* TSS window: strand-aware one-sided outperforms symmetric both-sides. 100 bp is the sweet spot; performance drops beyond 100 bp (tested 50–5000 bp)
+  
+| Both VS one direction TSS | The size of TSS |
+|:-------------------------:|:---------------:|
+| <img src="Code%20submission/plot/tss%20windows%20chrom_kfold.png" width="420"/> | <img src="Code%20submission/plot/tss%20one%20side.png" width="435"/> |
+
 
 ---
 
@@ -133,15 +155,6 @@ The mask significantly improves predictions in most settings. One exception: whe
 ![SHAP analysis](Code%20submission/plot/SHAP%20analyze.png)
 
 According to the top important features, we could see that the model focuses on how open the promoter is (DNase) and whether it’s more open than the gene body. If the promoter is uniformly open and more open than the body, the gene is likely on.
-
----
-
-## 📦 Submission Format
-
-* Output columns: (row index, no header), `gene_name`, `gex_predicted`
-* CSV inside ZIP must be `gex_predicted.csv`
-* ZIP must be named `LastName_FirstName_Project1.zip`
-  (My code includes shape/dtype asserts and a zipping utility)
 
 ---
 
