@@ -186,7 +186,7 @@ venv.bak/
 
 # mkdocs documentation
 /site
-
+*/.ipynb_checkpoints
 # mypy
 .mypy_cache/
 .dmypy.json
@@ -225,3 +225,11 @@ pyrightconfig.json
 ML4G_Project_1_Data/**/*.bed
 ML4G_Project_1_Data/**/*.bw
 ML4G_Project_1_Data/**/*.bigwig
+preprocessed_data/reference/1. merged data/without_y_100_one_side/X1_all_rank_features.tsv
+preprocessed_data/reference/1. merged data/without_y_100_one_side/X2_all_rank_features.tsv
+preprocessed_data/reference/1. merged data/without_y_100_one_side/X3_all_rank_features.tsv
+preprocessed_data/reference/1. merged data/with_y_100_one_side/X2_all_rank_features_with_y.tsv
+preprocessed_data/reference/1. merged data/with_y_100_one_side/X1_all_rank_features_with_y.tsv
+preprocessed_data/reference/1. merged data/without_y_100_one_side/X1_all_logzscore_logzscore.tsv
+preprocessed_data/reference/1. merged data/without_y_100_one_side/X2_all_logzscore_logzscore.tsv
+preprocessed_data/reference/1. merged data/without_y_100_one_side/X3_all_logzscore_logzscore.tsv
