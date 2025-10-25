@@ -1,9 +1,52 @@
- 🧬 ML4G Project 1 — Predicting Gene Expression from Epigenomic Signals
+# 🧬 ML4G Project 1 — Predicting Gene Expression from Epigenomic Signals
 
 > Predict gene expression for unseen cell lines using epigenomic features.
 > LightGBM + robust preprocessing, complementary features, and chromosome-aware validation.
 
-This is the **quick start**. For the full pipeline (notebooks, plots, configs, detailed notes), see **`Code submission/README.md`**.
+**🏅 Result:** Ranked **1st** in **ETH Zürich – Machine Learning for Genomics (263-5351-00L, HS2025)** Project 1, supervised by **Prof. Valentina Boeva** (Head TA: **Lovro Rabuzin**).
+
+See the full project description here: [ML4G_Project_1_2025.pdf](./ML4G_Project_1_2025.pdf)
+
+If you only need a quick start, see the **[Reproduction](#-reproduction)** section below; detailed notebooks and plots live in **[`Code submission/`](./Code%20submission/)**.
+
+
+---
+
+## 📘 What this repo does (short)
+
+* Loads histone marks (H3K27ac, H3K4me3, H3K27me3, H3K36me3, H3K4me1, H3K9me3) + DNase (BED + bigWig).
+* Preprocesses with **log1p → per-mark z-score** (“log-z”) to reduce outliers/batch effects.
+* Engineers promoter↔gene-body, activation↔repression, and cross-layer (BED × bigWig) features.
+* Trains **LightGBM** in two stages: binary (non-zero) → rank regression (Spearman-friendly).
+* Validates with **LOCO** + chr-aware K-Fold; applies **probability masking**.
+* Final ensemble/stacking + ready-to-submit outputs.
+
+👉 Full details, ablations, and SHAP interpretation live in **`Code submission/`**.
+
+---
+
+## 🗂 Full pipeline (see `Code submission/`)
+
+All numbered notebooks, plots, configs, and outputs are under **Code submission/**, e.g.:
+
+```
+Code submission/
+  0. reference autosome.ipynb
+  1. Global mean std.ipynb
+  2. extract bed.ipynb
+  2. extract bigwig.ipynb
+  2. merge y.ipynb
+  3. merge bed bi.ipynb
+  4. features engineer.ipynb
+  5. merge y with all features.ipynb
+  6. features selection.ipynb
+  7. train lgbm.ipynb
+  EDA.ipynb
+  README.md
+  environment.yml
+  plot/ ... (figures)
+  result/ ... (per-setup outputs + final ensemble)
+```
 
 ---
 
@@ -56,53 +99,6 @@ The **ML4G_Project_1_Data** folder data is available via **Polybox**:
 **Password:** `transcription_factor_2025`
 
 Place downloaded data under the repo root (the Docker command above mounts it to `/workspace`).
-
----
-
-## 📘 What this repo does (short)
-
-* Loads histone marks (H3K27ac, H3K4me3, H3K27me3, H3K36me3, H3K4me1, H3K9me3) + DNase (BED + bigWig).
-* Preprocesses with **log1p → per-mark z-score** (“log-z”) to reduce outliers/batch effects.
-* Engineers promoter↔gene-body, activation↔repression, and cross-layer (BED × bigWig) features.
-* Trains **LightGBM** in two stages: binary (non-zero) → rank regression (Spearman-friendly).
-* Validates with **LOCO** + chr-aware K-Fold; applies **probability masking**.
-* Final ensemble/stacking + ready-to-submit outputs.
-
-👉 Full details, ablations, and SHAP interpretation live in **`Code submission/`**.
-
----
-
-## 🗂 Full pipeline (see `Code submission/`)
-
-All numbered notebooks, plots, configs, and outputs are under **Code submission/**, e.g.:
-
-```
-Code submission/
-  0. reference autosome.ipynb
-  1. Global mean std.ipynb
-  2. extract bed.ipynb
-  2. extract bigwig.ipynb
-  2. merge y.ipynb
-  3. merge bed bi.ipynb
-  4. features engineer.ipynb
-  5. merge y with all features.ipynb
-  6. features selection.ipynb
-  7. train lgbm.ipynb
-  EDA.ipynb
-  README.md
-  environment.yml
-  plot/ ... (figures)
-  result/ ... (per-setup outputs + final ensemble)
-```
-
----
-
-## 🎓 Course Context (ETH Zürich)
-
-**263-5351-00L Machine Learning for Genomics (HS2025)**
-Lecturer: Prof. Valentina Boeva 
-Course goals: ML methods for genomics — TF binding/open chromatin/histone marks, variant effects, expression prediction, folding (RNN/LSTM/Transformers), deconvolution, single-cell imputation/clustering, batch correction, spatial omics, survival analysis.
-Prereqs: Intro ML, stats/probability, Python, Unix shell (bio/genomics background helpful but not required).
 
 ---
 
