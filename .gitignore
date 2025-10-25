@@ -225,44 +225,11 @@ pyrightconfig.json
 ML4G_Project_1_Data/**/*.bed
 ML4G_Project_1_Data/**/*.bw
 ML4G_Project_1_Data/**/*.bigwig
-preprocessed_data/CAGE-merged/3. add features engineer/X1_all_rank_features.tsv
-preprocessed_data/CAGE-merged/3. add features engineer/X2_all_rank_features.tsv
-preprocessed_data/CAGE-merged/6. merged_with_bed/X1_all_features_with_bed.tsv
-preprocessed_data/CAGE-merged/6. merged_with_bed/X2_all_features_with_bed.tsv
-preprocessed_data/reference/1. normalized_bigwig/X1_zscore_dynamics.tsv
-.gitignore
-preprocessed_data/reference/1. normalized_bigwig/X3_zscore_dynamics.tsv
-preprocessed_data/reference/1. normalized_bigwig/X2_zscore_dynamics.tsv
-preprocessed_data/reference/1. quantile_normalized/bigwig/X1_bigwig_qn.tsv
-preprocessed_data/reference/1. quantile_normalized/bigwig/X2_bigwig_qn.tsv
-preprocessed_data/reference/1. quantile_normalized/bigwig/X3_bigwig_qn.tsv
-preprocessed_data/reference/1. quantile_normalized/bed/X3_bed_qn.tsv
-preprocessed_data/reference/1. quantile_normalized/bed/X1_bed_qn.tsv
-preprocessed_data/reference/2. features_engineered_selected/X1_all_features_with_bed_pruned_and_y.tsv
-preprocessed_data/reference/2. features_engineered_selected/X2_all_features_with_bed_pruned_and_y.tsv
-preprocessed_data/CAGE-merged/2. feature_annotated/X2_gene_with_H3K4me1_peak.tsv
-preprocessed_data/reference/0. raw_data/raw_bed/X1_with_allMarks_raw.tsv
-preprocessed_data/reference/0. raw_data/raw_bed/X2_with_allMarks_raw.tsv
-preprocessed_data/reference/0. raw_data/raw_bed/X3_with_allMarks_raw.tsv
-preprocessed_data/reference/0. raw_data/raw_bigwig/X1_raw_bigwig.tsv
-preprocessed_data/reference/0. raw_data/raw_bigwig/X2_raw_bigwig.tsv
-preprocessed_data/reference/0. raw_data/raw_bigwig/X3_raw_bigwig.tsv
-preprocessed_data/reference/1. quantile_normalized/X1_all_features_with_bed_pruned.tsv
-preprocessed_data/reference/1. quantile_normalized/X1_all_qn_with_y.tsv
-preprocessed_data/reference/1. quantile_normalized/X1_all_qn.tsv
-preprocessed_data/reference/1. quantile_normalized/X1_all_rank_features.tsv
-preprocessed_data/reference/1. quantile_normalized/X2_all_features_with_bed_pruned.tsv
-preprocessed_data/reference/1. quantile_normalized/X2_all_qn_with_y.tsv
-preprocessed_data/reference/1. quantile_normalized/X2_all_qn.tsv
-preprocessed_data/reference/1. quantile_normalized/X2_all_rank_features.tsv
-preprocessed_data/reference/1. quantile_normalized/X3_all_features_with_bed_pruned.tsv
-preprocessed_data/reference/1. quantile_normalized/X3_all_qn.tsv
-preprocessed_data/reference/1. quantile_normalized/X3_all_rank_features.tsv
-preprocessed_data/reference/1. quantile_normalized/bed/X2_bed_qn.tsv
-preprocessed_data/reference/0. data/**/*.tsv
-preprocessed_data/reference/1. merged data/without_y/*.tsv
-
-# big data
-preprocessed_data/reference/1. merged data/with_y/*.tsv
-preprocessed_data/reference/0. data/bed1000_one_side/X1_logzscore.tsv
-preprocessed_data/reference/1. merged data/**/*.tsv
+preprocessed_data/reference/1. merged data/without_y_100_one_side/X1_all_rank_features.tsv
+preprocessed_data/reference/1. merged data/without_y_100_one_side/X2_all_rank_features.tsv
+preprocessed_data/reference/1. merged data/without_y_100_one_side/X3_all_rank_features.tsv
+preprocessed_data/reference/1. merged data/with_y_100_one_side/X2_all_rank_features_with_y.tsv
+preprocessed_data/reference/1. merged data/with_y_100_one_side/X1_all_rank_features_with_y.tsv
+preprocessed_data/reference/1. merged data/without_y_100_one_side/X1_all_logzscore_logzscore.tsv
+preprocessed_data/reference/1. merged data/without_y_100_one_side/X2_all_logzscore_logzscore.tsv
+preprocessed_data/reference/1. merged data/without_y_100_one_side/X3_all_logzscore_logzscore.tsv
