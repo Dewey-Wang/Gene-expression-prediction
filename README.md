@@ -97,12 +97,13 @@ I use **LightGBM (LGBM)** for both binary classification (is expression > 0?) an
   1. X1+X2 pooled: mix X1+X2 for train/val
   2. X1-only: train/val on X1
   3. X2-only: train/val on X2
-  4. X1 cross cell line validation: train on X1, val on X2
-  5. X2 cross cell line validation: train on X2, val on X1
+  4. X1 cross cell line validation: train on X1, val on X2 (Didn't use in stacking. See result section for detail.)
+  5. X2 cross cell line validation: train on X2, val on X1 (Didn't use in stacking. See result section for detail.)
+
 * Stacking rule:
 
-  * final rank = mean of the 5 rank predictions
-  * final mask = mean classifier probability (Here, I didn't use mix X1+X2 because it will make the performance worse. I wrote the reason in result.), thresholded at 0.40
+  * final rank = mean of the 3 rank predictions
+  * final mask = mean of the 3 classifier probability, thresholded at 0.40
   * final prediction = rank × mask
     (Union/interaction masks were tested; mean + 0.4 worked best)
     
@@ -117,7 +118,7 @@ I use **LightGBM (LGBM)** for both binary classification (is expression > 0?) an
 
 * Leave-Chromosome-Out (chr2–chr22): generalization to unseen regions; avoids positional leakage
 * K-Fold on genes: overall robustness
-* I also compare single-cell-line training vs mixed X1+X2 training
+
 
 ---
 
@@ -127,11 +128,13 @@ I use **LightGBM (LGBM)** for both binary classification (is expression > 0?) an
 |:-------------------------:|:---------------:|
 | <img src="Code%20submission/plot/see%20mask%20on%20unseen%20cell%20line.png" width="490"/> | <img src="Code%20submission/plot/see%20mask%20on%20the%20same%20cell%20line.png" width="420"/> |
 
-The mask significantly improves predictions in most settings. One exception: when mixing X1+X2 to train models, masking can hurt. My hypothesis for Mixing X1 and X2 degrades the binary model: the model is forced toward a compromise between datasets with different noise profiles, which lowers performance.
-
-As shown in the figure, the difference between cross– and within–cell-line validation is minimal, suggesting the model already learns the general pattern from a single cell line. Pooling cell lines adds heterogeneous noise, pushing the binary classifier toward a compromise solution and reducing performance.
+The mask significantly improves predictions in most settings. One exception: when mixing X1+X2 to train models, masking can hurt. However, this does not necessarily indicate degradation. Mixing encourages the model to learn a more general decision boundary across two data domains (X1 and X2) that have different noise characteristics and distributions. Even on the same chromosome and the same gene, X1 and X2 can show distinct distributions in histone marks (see EDA.ipynb). To remain reliable under “the same gene but different distributions,” the model may trade a small amount of single-domain performance in the short term for better generalization. Based on this, I therefore also stack the mixed (X1+X2) binary and regression models with the within-cell-line models (averaging by task) so they complement each other’s weaknesses and improve cross-domain robustness.
 
 ![Performance analysis cross vs within cell line](Code%20submission/plot/cross%20vs%20within%20cell%20line.png)
+
+As shown in the figure, the gap between cross– and within–cell-line validation is minimal. After log-z score normalization, the distributional difference between X1 and X2 is largely reduced for histone-mark features. Consequently, many predictive signals are cell-line agnostic or partially conserved across X1 and X2, which explains why the two validation schemes yield similar accuracy when predicting a single target cell line.
+
+Given this, I use within–cell-line validation as the basis for model selection and stacking because it avoids domain averaging and lets the model fully exploit cell-line–specific patterns that remain after normalization. To mitigate any remaining trade-offs, I also stack the X1+X2 mixed models alongside the within–cell-line models, allowing them to complement each other’s weaknesses and preserving on-distribution calibration while adding cross-domain robustness.
 
 ### Ablations
 
@@ -143,7 +146,7 @@ As shown in the figure, the difference between cross– and within–cell-line v
 
 * TSS window: strand-aware one-sided outperforms symmetric both-sides. 100 bp is the sweet spot; performance drops beyond 100 bp (tested 50–5000 bp)
   
-| Both VS one direction TSS | The size of TSS |
+| Both-sided VS one-sided TSS  | The size of TSS |
 |:-------------------------:|:---------------:|
 | <img src="Code%20submission/plot/tss%20windows%20chrom_kfold.png" width="420"/> | <img src="Code%20submission/plot/tss%20one%20side.png" width="435"/> |
 
