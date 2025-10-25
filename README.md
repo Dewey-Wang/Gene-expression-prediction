@@ -7,7 +7,7 @@
 
 See the full project description here: [ML4G_Project_1_2025.pdf](./ML4G_Project_1_2025.pdf)
 
-If you only need a quick start, see the **[Reproduction](#-reproduction)** section below; detailed notebooks and plots live in **[`Code submission/`](./Code%20submission/)**.
+If you only need a quick start, see the **[Reproduction](#-Reproduce-My-Results)** section below; detailed notebooks and plots live in **[`Code submission/`](./Code%20submission/)**.
 
 
 ---
