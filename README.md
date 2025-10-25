@@ -1,116 +1,129 @@
+# 🧬 ML4G Project 1 — Predicting Gene Expression from Epigenomic Signals
 
-# 🧬 ML4G Project 1 – Predicting Gene Expression from Epigenomic Signals
+> Predict gene expression for unseen cell lines using epigenomic features.
+> LightGBM + robust preprocessing, complementary features, and chromosome-aware validation.
 
-## 📘 Overview
-This project aims to **predict gene expression levels** for different cell lines using epigenomic features derived from histone modification and chromatin accessibility datasets.  
-The datasets include:
+**🏅 Result:** Ranked **1st** in **ETH Zürich – Machine Learning for Genomics (263-5351-00L, HS2025)** Project 1, supervised by **Prof. Valentina Boeva** (Head TA: **Lovro Rabuzin**).
 
-- **CAGE (Cap Analysis of Gene Expression)** — Target gene expression values  
-- **ChIP-seq marks:**  
-  - H3K27me3  
-  - H3K4me1  
-  - H3K4me3  
-  - H3K27ac  
-  - H3K36me3  
-  - H3K9me3  
-- **DNase-seq:** Chromatin accessibility signals  
+See the full project description here: [ML4G_Project_1_2025.pdf](./ML4G_Project_1_2025.pdf)
 
-Each dataset is provided in both **BED** and **BigWig** formats.
-
----
-
-## 🧱 Data Preprocessing Workflow
-
-### 1️⃣ Unzipping & Organization
-All raw `.zip` archives were extracted and organized under:
-```
-ML4G_Project_1_Data/
-```
-
-### 2️⃣ CAGE Merging (Train)
-For both training cell lines **X1** and **X2**, the train and validation files were merged. Also, the gene expression was merged into info file:
-
-```
-X1_train_info.tsv + X1_val_info.tsv + X1_train_y.tsv + X1_val_y.tsv → X1_merged.tsv
-X2_train_info.tsv + X2_val_info.tsv + X2_train_y.tsv + X2_val_y.tsv → X2_merged.tsv
-```
-
-Merged outputs are stored under:
-
-```
-preprocessed_data/CAGE-merged/
-```
-
-
-### 3️⃣ Chromosome-wise Splitting
-- **X1** and **X2** (training): only chromosomes **chr2–chr22** retained  
-- **X3** (test): only **chr1**
-Each subfolder contains:
-```
-{cell}genes{chr}.tsv
-{mark}{cell}{chr}.bed
-```
-
-Final structure:
-
-```
-preprocessed_data/
-└── chromosomes/
-        ├───test
-        │   └───chr1
-        │       └───X3
-        └───train
-            ├── chr2/
-            │ ├── X1/
-            │ └── X2/
-            ├── chr3/
-            │ ├── X1/
-            │ └── X2/
-            ├── ...
-```
+If you only need a quick start, see the **[Reproduction](#-Reproduce-My-Results)** section below; detailed notebooks and plots live in **[`Code submission/`](./Code%20submission/)**.
 
 
 ---
 
-# Planned Next Step
-BigWig signals will be parsed using `pyBigWig` to extract average or maximum signal values around each gene’s TSS (±2 kb) as tabular numerical features.
+## 📘 What this repo does (short)
 
+* Loads histone marks (H3K27ac, H3K4me3, H3K27me3, H3K36me3, H3K4me1, H3K9me3) + DNase (BED + bigWig).
+* Preprocesses with **log1p → per-mark z-score** (“log-z”) to reduce outliers/batch effects.
+* Engineers promoter↔gene-body, activation↔repression, and cross-layer (BED × bigWig) features.
+* Trains **LightGBM** in two stages: binary (non-zero) → rank regression (Spearman-friendly).
+* Validates with **LOCO** + chr-aware K-Fold; applies **probability masking**.
+* Final ensemble/stacking + ready-to-submit outputs.
 
-## 🧩 Feature Representation
-Each gene will be represented as a **tabular feature vector** combining:
-- Mean or max values of each ChIP-seq mark  
-- Chromatin accessibility (DNase-seq signal)  
-- Optional genomic metadata (strand, GC content, etc.)
-
----
-
-## 🧠 Model Design
-Currently focusing on **tabular regression models**, suitable for structured genomic features.
-
-Candidate models:
-- **LightGBM**
-- **XGBoost**  
+👉 Full details, ablations, and SHAP interpretation live in **`Code submission/`**.
 
 ---
 
-## 🧪 Validation Strategy
+## 🗂 Full pipeline (see `Code submission/`)
 
-Two complementary validation methods are planned:
+All numbered notebooks, plots, configs, and outputs are under **Code submission/**, e.g.:
 
-### 🔹 Normal K-Fold Cross-Validation
-- Randomly split genes into *k* folds  
-- Each fold serves as validation once  
-- Evaluates general model robustness and stability  
+```
+Code submission/
+  0. reference autosome.ipynb
+  1. Global mean std.ipynb
+  2. extract bed.ipynb
+  2. extract bigwig.ipynb
+  2. merge y.ipynb
+  3. merge bed bi.ipynb
+  4. features engineer.ipynb
+  5. merge y with all features.ipynb
+  6. features selection.ipynb
+  7. train lgbm.ipynb
+  EDA.ipynb
+  README.md
+  environment.yml
+  plot/ ... (figures)
+  result/ ... (per-setup outputs + final ensemble)
+```
 
-### 🔹 Leave-Chromosome-Out K-Fold
-- Each chromosome (chr2–chr22) is left out in turn  
-- Tests the ability to generalize to **unseen genomic regions**  
-- Prevents position-based information leakage  
+---
+
+## 🚀 Reproduce My Results
+
+### Option A — Docker (no local setup)
+
+```bash
+docker pull deweywang/ml4g-project1:latest
+
+docker run --rm -it \
+  -p 8888:8888 \
+  -v "$PWD":/workspace \
+  deweywang/ml4g-project1:latest
+```
+
+Then open **[http://localhost:8888](http://localhost:8888)** (runs without token; use on trusted networks).
+Your current folder is mounted to **/workspace** in the container.
+
+---
+
+### Option B — Run Locally (.venv / pip)
+
+> ✅ Everything installs into **`.venv`** and won’t touch your global Python.
+
+```bash
+make init                  # Step 1: create venv and install deps
+source .venv/bin/activate  # Step 2 (macOS/Linux)
+# .venv\Scripts\activate   # Step 2 (Windows, WSL2 recommended for pyBigWig)
+make lab                   # Step 3: launch JupyterLab
+```
+
+Inside JupyterLab: pick **Python (.venv) ml4g_project1** as the kernel.
+
+Extras:
+
+```bash
+make clean   # remove the venv and kernel spec
+make reset   # clean everything and reinitialize from scratch
+```
+
+> Note: `pyBigWig` requires Linux/macOS toolchains. On Windows, use **WSL2 (Ubuntu)** or Docker.
+
+---
+
+## 📂 Data
+
+The **ML4G_Project_1_Data** folder data is available via **Polybox**:
+**Link:** [https://polybox.ethz.ch/index.php/s/XJZFdLSZNHpEDLw](https://polybox.ethz.ch/index.php/s/XJZFdLSZNHpEDLw)
+**Password:** `transcription_factor_2025`
+
+Place downloaded data under the repo root (the Docker command above mounts it to `/workspace`).
 
 ---
 
 ## ⚙️ Environment
-```
-Python 3.8.20
-```
 
+* Dev platform: **macOS (Apple Silicon M1)**.
+* `pyBigWig` requires Linux/macOS toolchains. For Windows, use **WSL2** or Docker.
+* Exact versions are pinned in **`Code submission/environment.yml`** (Docker image is built with conda-forge + bioconda).
+
+---
+
+## 📜 License & Citation
+
+**CC BY-NC 4.0** (non-commercial, attribution required).
+
+Please cite:
+
+> Wang, Ding-Yang. *ML4G Project 1 – Predicting Gene Expression from Epigenomic Signals*. GitHub repository, 2025.
+
+```bibtex
+@misc{wang2025ml4g,
+  author       = {Wang, Ding-Yang},
+  title        = {ML4G Project 1 – Predicting Gene Expression from Epigenomic Signals},
+  year         = {2025},
+  howpublished = {\url{https://github.com/<your-repo>}},
+  note         = {Non-commercial use; citation required}
+}
+```

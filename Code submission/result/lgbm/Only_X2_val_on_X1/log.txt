@@ -1,0 +1,645 @@
+==== New Experiment 2025-10-19 19:56:02 ====
+🔒 Global seed set to 42
+🧪 Loaded unlabeled test set: ../preprocessed_data/reference/1. merged data/with_y_100_one_side/X3_test.tsv (shape=(1984, 2920))
+✅ Loaded 63 selected features from ./top_features_shap/selected_union_features.tsv
+💾 Config saved → ./results/lgbm/Only_X2_val_on_X1/config.json
+Chromosomes: ['chr2', 'chr3', 'chr4', 'chr5', 'chr6', 'chr7', 'chr8', 'chr9', 'chr10', 'chr11', 'chr12', 'chr13', 'chr14', 'chr15', 'chr16', 'chr17', 'chr18', 'chr19', 'chr20', 'chr21', 'chr22']
+
+🚀 Outer Fold = Leave out chr2
+  ⚙️ Inner Fold 1 | val_chrs=['chr3', 'chr8', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.7846, ρ_masked=0.8165
+     chr-kfold on train Val:['chr3', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.8396, ρ_masked=0.8526
+     chr-kfold Loco in Test chr2: ρ_nomask=0.7797, ρ_masked=0.8168
+     chr-kfold Loco in Train chr2: ρ_nomask=0.8215, ρ_masked=0.8359
+  ⚙️ Inner Fold 2 | val_chrs=['chr4', 'chr9', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.7899, ρ_masked=0.8150
+     chr-kfold on train Val:['chr4', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.8396, ρ_masked=0.8514
+     chr-kfold Loco in Test chr2: ρ_nomask=0.7768, ρ_masked=0.8090
+     chr-kfold Loco in Train chr2: ρ_nomask=0.8212, ρ_masked=0.8358
+  ⚙️ Inner Fold 3 | val_chrs=['chr5', 'chr10', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.7838, ρ_masked=0.8121
+     chr-kfold on train Val:['chr5', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.8383, ρ_masked=0.8546
+     chr-kfold Loco in Test chr2: ρ_nomask=0.7795, ρ_masked=0.8140
+     chr-kfold Loco in Train chr2: ρ_nomask=0.8202, ρ_masked=0.8345
+  ⚙️ Inner Fold 4 | val_chrs=['chr6', 'chr11', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.7743, ρ_masked=0.8101
+     chr-kfold on train Val:['chr6', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.8251, ρ_masked=0.8404
+     chr-kfold Loco in Test chr2: ρ_nomask=0.7788, ρ_masked=0.8181
+     chr-kfold Loco in Train chr2: ρ_nomask=0.8204, ρ_masked=0.8323
+  ⚙️ Inner Fold 5 | val_chrs=['chr7', 'chr12', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr7', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.7830, ρ_masked=0.8120
+     chr-kfold on train Val:['chr7', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.8292, ρ_masked=0.8480
+     chr-kfold Loco in Test chr2: ρ_nomask=0.7814, ρ_masked=0.8136
+     chr-kfold Loco in Train chr2: ρ_nomask=0.8187, ρ_masked=0.8301
+📊 Validation (all chr-kfold) in Test chr2: ρ_nomask=0.7810, ρ_masked=0.8176
+📊 Validation (all chr-kfold) in Train chr2: ρ_nomask=0.8214, ρ_masked=0.8329
+
+🚀 Outer Fold = Leave out chr3
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr8', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.7744, ρ_masked=0.8121
+     chr-kfold on train Val:['chr2', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.8243, ρ_masked=0.8425
+     chr-kfold Loco in Test chr3: ρ_nomask=0.7997, ρ_masked=0.8243
+     chr-kfold Loco in Train chr3: ρ_nomask=0.8525, ρ_masked=0.8585
+  ⚙️ Inner Fold 2 | val_chrs=['chr4', 'chr9', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.7908, ρ_masked=0.8132
+     chr-kfold on train Val:['chr4', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.8397, ρ_masked=0.8546
+     chr-kfold Loco in Test chr3: ρ_nomask=0.8006, ρ_masked=0.8283
+     chr-kfold Loco in Train chr3: ρ_nomask=0.8528, ρ_masked=0.8550
+  ⚙️ Inner Fold 3 | val_chrs=['chr5', 'chr10', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.7823, ρ_masked=0.8105
+     chr-kfold on train Val:['chr5', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.8370, ρ_masked=0.8521
+     chr-kfold Loco in Test chr3: ρ_nomask=0.8014, ρ_masked=0.8210
+     chr-kfold Loco in Train chr3: ρ_nomask=0.8517, ρ_masked=0.8547
+  ⚙️ Inner Fold 4 | val_chrs=['chr6', 'chr11', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.7764, ρ_masked=0.8109
+     chr-kfold on train Val:['chr6', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.8251, ρ_masked=0.8400
+     chr-kfold Loco in Test chr3: ρ_nomask=0.8036, ρ_masked=0.8339
+     chr-kfold Loco in Train chr3: ρ_nomask=0.8534, ρ_masked=0.8615
+  ⚙️ Inner Fold 5 | val_chrs=['chr7', 'chr12', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr7', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.7822, ρ_masked=0.8153
+     chr-kfold on train Val:['chr7', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.8284, ρ_masked=0.8498
+     chr-kfold Loco in Test chr3: ρ_nomask=0.8004, ρ_masked=0.8261
+     chr-kfold Loco in Train chr3: ρ_nomask=0.8527, ρ_masked=0.8571
+📊 Validation (all chr-kfold) in Test chr3: ρ_nomask=0.8025, ρ_masked=0.8275
+📊 Validation (all chr-kfold) in Train chr3: ρ_nomask=0.8543, ρ_masked=0.8598
+
+🚀 Outer Fold = Leave out chr4
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr8', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.7732, ρ_masked=0.8112
+     chr-kfold on train Val:['chr2', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.8235, ρ_masked=0.8383
+     chr-kfold Loco in Test chr4: ρ_nomask=0.7736, ρ_masked=0.8100
+     chr-kfold Loco in Train chr4: ρ_nomask=0.8326, ρ_masked=0.8532
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr9', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.7945, ρ_masked=0.8147
+     chr-kfold on train Val:['chr3', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.8445, ρ_masked=0.8550
+     chr-kfold Loco in Test chr4: ρ_nomask=0.7776, ρ_masked=0.8229
+     chr-kfold Loco in Train chr4: ρ_nomask=0.8289, ρ_masked=0.8502
+  ⚙️ Inner Fold 3 | val_chrs=['chr5', 'chr10', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.7824, ρ_masked=0.8082
+     chr-kfold on train Val:['chr5', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.8374, ρ_masked=0.8538
+     chr-kfold Loco in Test chr4: ρ_nomask=0.7776, ρ_masked=0.8165
+     chr-kfold Loco in Train chr4: ρ_nomask=0.8296, ρ_masked=0.8513
+  ⚙️ Inner Fold 4 | val_chrs=['chr6', 'chr11', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.7748, ρ_masked=0.8099
+     chr-kfold on train Val:['chr6', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.8247, ρ_masked=0.8381
+     chr-kfold Loco in Test chr4: ρ_nomask=0.7756, ρ_masked=0.8219
+     chr-kfold Loco in Train chr4: ρ_nomask=0.8303, ρ_masked=0.8454
+  ⚙️ Inner Fold 5 | val_chrs=['chr7', 'chr12', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr7', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.7815, ρ_masked=0.8144
+     chr-kfold on train Val:['chr7', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.8286, ρ_masked=0.8493
+     chr-kfold Loco in Test chr4: ρ_nomask=0.7726, ρ_masked=0.8190
+     chr-kfold Loco in Train chr4: ρ_nomask=0.8280, ρ_masked=0.8468
+📊 Validation (all chr-kfold) in Test chr4: ρ_nomask=0.7766, ρ_masked=0.8145
+📊 Validation (all chr-kfold) in Train chr4: ρ_nomask=0.8321, ρ_masked=0.8518
+
+🚀 Outer Fold = Leave out chr5
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr8', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.7734, ρ_masked=0.8067
+     chr-kfold on train Val:['chr2', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.8248, ρ_masked=0.8405
+     chr-kfold Loco in Test chr5: ρ_nomask=0.7870, ρ_masked=0.8192
+     chr-kfold Loco in Train chr5: ρ_nomask=0.8576, ρ_masked=0.8777
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr9', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.7938, ρ_masked=0.8141
+     chr-kfold on train Val:['chr3', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.8455, ρ_masked=0.8534
+     chr-kfold Loco in Test chr5: ρ_nomask=0.7894, ρ_masked=0.8211
+     chr-kfold Loco in Train chr5: ρ_nomask=0.8541, ρ_masked=0.8681
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr10', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.7801, ρ_masked=0.8076
+     chr-kfold on train Val:['chr4', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.8287, ρ_masked=0.8437
+     chr-kfold Loco in Test chr5: ρ_nomask=0.7862, ρ_masked=0.8177
+     chr-kfold Loco in Train chr5: ρ_nomask=0.8565, ρ_masked=0.8677
+  ⚙️ Inner Fold 4 | val_chrs=['chr6', 'chr11', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.7745, ρ_masked=0.8076
+     chr-kfold on train Val:['chr6', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.8252, ρ_masked=0.8382
+     chr-kfold Loco in Test chr5: ρ_nomask=0.7845, ρ_masked=0.8166
+     chr-kfold Loco in Train chr5: ρ_nomask=0.8588, ρ_masked=0.8738
+  ⚙️ Inner Fold 5 | val_chrs=['chr7', 'chr12', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr7', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.7832, ρ_masked=0.8105
+     chr-kfold on train Val:['chr7', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.8297, ρ_masked=0.8485
+     chr-kfold Loco in Test chr5: ρ_nomask=0.7881, ρ_masked=0.8281
+     chr-kfold Loco in Train chr5: ρ_nomask=0.8545, ρ_masked=0.8682
+📊 Validation (all chr-kfold) in Test chr5: ρ_nomask=0.7885, ρ_masked=0.8224
+📊 Validation (all chr-kfold) in Train chr5: ρ_nomask=0.8578, ρ_masked=0.8764
+
+🚀 Outer Fold = Leave out chr6
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr8', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.7736, ρ_masked=0.8102
+     chr-kfold on train Val:['chr2', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.8241, ρ_masked=0.8410
+     chr-kfold Loco in Test chr6: ρ_nomask=0.7831, ρ_masked=0.8059
+     chr-kfold Loco in Train chr6: ρ_nomask=0.8113, ρ_masked=0.8154
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr9', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.7954, ρ_masked=0.8166
+     chr-kfold on train Val:['chr3', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.8451, ρ_masked=0.8550
+     chr-kfold Loco in Test chr6: ρ_nomask=0.7854, ρ_masked=0.8072
+     chr-kfold Loco in Train chr6: ρ_nomask=0.8136, ρ_masked=0.8206
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr10', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.7811, ρ_masked=0.8106
+     chr-kfold on train Val:['chr4', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.8314, ρ_masked=0.8476
+     chr-kfold Loco in Test chr6: ρ_nomask=0.7851, ρ_masked=0.8083
+     chr-kfold Loco in Train chr6: ρ_nomask=0.8161, ρ_masked=0.8181
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr11', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.7707, ρ_masked=0.8100
+     chr-kfold on train Val:['chr5', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.8351, ρ_masked=0.8522
+     chr-kfold Loco in Test chr6: ρ_nomask=0.7830, ρ_masked=0.8092
+     chr-kfold Loco in Train chr6: ρ_nomask=0.8142, ρ_masked=0.8196
+  ⚙️ Inner Fold 5 | val_chrs=['chr7', 'chr12', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr7', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.7836, ρ_masked=0.8150
+     chr-kfold on train Val:['chr7', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.8286, ρ_masked=0.8498
+     chr-kfold Loco in Test chr6: ρ_nomask=0.7859, ρ_masked=0.8146
+     chr-kfold Loco in Train chr6: ρ_nomask=0.8151, ρ_masked=0.8153
+📊 Validation (all chr-kfold) in Test chr6: ρ_nomask=0.7861, ρ_masked=0.8121
+📊 Validation (all chr-kfold) in Train chr6: ρ_nomask=0.8159, ρ_masked=0.8182
+
+🚀 Outer Fold = Leave out chr7
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr8', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.7745, ρ_masked=0.8108
+     chr-kfold on train Val:['chr2', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.8234, ρ_masked=0.8378
+     chr-kfold Loco in Test chr7: ρ_nomask=0.7825, ρ_masked=0.8135
+     chr-kfold Loco in Train chr7: ρ_nomask=0.8358, ρ_masked=0.8602
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr9', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.7944, ρ_masked=0.8126
+     chr-kfold on train Val:['chr3', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.8450, ρ_masked=0.8559
+     chr-kfold Loco in Test chr7: ρ_nomask=0.7845, ρ_masked=0.8119
+     chr-kfold Loco in Train chr7: ρ_nomask=0.8335, ρ_masked=0.8584
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr10', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.7799, ρ_masked=0.8110
+     chr-kfold on train Val:['chr4', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.8306, ρ_masked=0.8481
+     chr-kfold Loco in Test chr7: ρ_nomask=0.7803, ρ_masked=0.8084
+     chr-kfold Loco in Train chr7: ρ_nomask=0.8346, ρ_masked=0.8565
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr11', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.7722, ρ_masked=0.8092
+     chr-kfold on train Val:['chr5', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.8339, ρ_masked=0.8532
+     chr-kfold Loco in Test chr7: ρ_nomask=0.7855, ρ_masked=0.8171
+     chr-kfold Loco in Train chr7: ρ_nomask=0.8349, ρ_masked=0.8602
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr12', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.7853, ρ_masked=0.8167
+     chr-kfold on train Val:['chr6', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.8249, ρ_masked=0.8399
+     chr-kfold Loco in Test chr7: ρ_nomask=0.7846, ρ_masked=0.8119
+     chr-kfold Loco in Train chr7: ρ_nomask=0.8364, ρ_masked=0.8570
+📊 Validation (all chr-kfold) in Test chr7: ρ_nomask=0.7851, ρ_masked=0.8165
+📊 Validation (all chr-kfold) in Train chr7: ρ_nomask=0.8361, ρ_masked=0.8603
+
+🚀 Outer Fold = Leave out chr8
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr13', 'chr18'] ρ_nomask=0.7759, ρ_masked=0.8107
+     chr-kfold on train Val:['chr2', 'chr7', 'chr13', 'chr18'] ρ_nomask=0.8237, ρ_masked=0.8394
+     chr-kfold Loco in Test chr8: ρ_nomask=0.7792, ρ_masked=0.8164
+     chr-kfold Loco in Train chr8: ρ_nomask=0.8408, ρ_masked=0.8614
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr9', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.7933, ρ_masked=0.8135
+     chr-kfold on train Val:['chr3', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.8436, ρ_masked=0.8548
+     chr-kfold Loco in Test chr8: ρ_nomask=0.7797, ρ_masked=0.8171
+     chr-kfold Loco in Train chr8: ρ_nomask=0.8387, ρ_masked=0.8583
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr10', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.7816, ρ_masked=0.8105
+     chr-kfold on train Val:['chr4', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.8312, ρ_masked=0.8471
+     chr-kfold Loco in Test chr8: ρ_nomask=0.7795, ρ_masked=0.8203
+     chr-kfold Loco in Train chr8: ρ_nomask=0.8413, ρ_masked=0.8614
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr11', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.7737, ρ_masked=0.8064
+     chr-kfold on train Val:['chr5', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.8340, ρ_masked=0.8542
+     chr-kfold Loco in Test chr8: ρ_nomask=0.7819, ρ_masked=0.8219
+     chr-kfold Loco in Train chr8: ρ_nomask=0.8412, ρ_masked=0.8662
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr12', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.7862, ρ_masked=0.8190
+     chr-kfold on train Val:['chr6', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.8252, ρ_masked=0.8405
+     chr-kfold Loco in Test chr8: ρ_nomask=0.7783, ρ_masked=0.8161
+     chr-kfold Loco in Train chr8: ρ_nomask=0.8426, ρ_masked=0.8648
+📊 Validation (all chr-kfold) in Test chr8: ρ_nomask=0.7809, ρ_masked=0.8213
+📊 Validation (all chr-kfold) in Train chr8: ρ_nomask=0.8427, ρ_masked=0.8676
+
+🚀 Outer Fold = Leave out chr9
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr13', 'chr18'] ρ_nomask=0.7741, ρ_masked=0.8068
+     chr-kfold on train Val:['chr2', 'chr7', 'chr13', 'chr18'] ρ_nomask=0.8223, ρ_masked=0.8398
+     chr-kfold Loco in Test chr9: ρ_nomask=0.7586, ρ_masked=0.7729
+     chr-kfold Loco in Train chr9: ρ_nomask=0.8356, ρ_masked=0.8519
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr14', 'chr19'] ρ_nomask=0.7980, ρ_masked=0.8198
+     chr-kfold on train Val:['chr3', 'chr8', 'chr14', 'chr19'] ρ_nomask=0.8451, ρ_masked=0.8563
+     chr-kfold Loco in Test chr9: ρ_nomask=0.7582, ρ_masked=0.7761
+     chr-kfold Loco in Train chr9: ρ_nomask=0.8347, ρ_masked=0.8513
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr10', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.7801, ρ_masked=0.8109
+     chr-kfold on train Val:['chr4', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.8296, ρ_masked=0.8424
+     chr-kfold Loco in Test chr9: ρ_nomask=0.7562, ρ_masked=0.7718
+     chr-kfold Loco in Train chr9: ρ_nomask=0.8355, ρ_masked=0.8489
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr11', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.7742, ρ_masked=0.8112
+     chr-kfold on train Val:['chr5', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.8330, ρ_masked=0.8522
+     chr-kfold Loco in Test chr9: ρ_nomask=0.7578, ρ_masked=0.7713
+     chr-kfold Loco in Train chr9: ρ_nomask=0.8341, ρ_masked=0.8523
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr12', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.7851, ρ_masked=0.8181
+     chr-kfold on train Val:['chr6', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.8248, ρ_masked=0.8399
+     chr-kfold Loco in Test chr9: ρ_nomask=0.7624, ρ_masked=0.7782
+     chr-kfold Loco in Train chr9: ρ_nomask=0.8371, ρ_masked=0.8562
+📊 Validation (all chr-kfold) in Test chr9: ρ_nomask=0.7605, ρ_masked=0.7763
+📊 Validation (all chr-kfold) in Train chr9: ρ_nomask=0.8365, ρ_masked=0.8525
+
+🚀 Outer Fold = Leave out chr10
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr13', 'chr18'] ρ_nomask=0.7763, ρ_masked=0.8128
+     chr-kfold on train Val:['chr2', 'chr7', 'chr13', 'chr18'] ρ_nomask=0.8231, ρ_masked=0.8407
+     chr-kfold Loco in Test chr10: ρ_nomask=0.7819, ρ_masked=0.8044
+     chr-kfold Loco in Train chr10: ρ_nomask=0.8264, ρ_masked=0.8397
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr14', 'chr19'] ρ_nomask=0.7977, ρ_masked=0.8202
+     chr-kfold on train Val:['chr3', 'chr8', 'chr14', 'chr19'] ρ_nomask=0.8454, ρ_masked=0.8556
+     chr-kfold Loco in Test chr10: ρ_nomask=0.7856, ρ_masked=0.8069
+     chr-kfold Loco in Train chr10: ρ_nomask=0.8248, ρ_masked=0.8376
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr15', 'chr20'] ρ_nomask=0.7739, ρ_masked=0.8023
+     chr-kfold on train Val:['chr4', 'chr9', 'chr15', 'chr20'] ρ_nomask=0.8322, ρ_masked=0.8463
+     chr-kfold Loco in Test chr10: ρ_nomask=0.7802, ρ_masked=0.8032
+     chr-kfold Loco in Train chr10: ρ_nomask=0.8250, ρ_masked=0.8335
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr11', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.7719, ρ_masked=0.8078
+     chr-kfold on train Val:['chr5', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.8327, ρ_masked=0.8543
+     chr-kfold Loco in Test chr10: ρ_nomask=0.7785, ρ_masked=0.8004
+     chr-kfold Loco in Train chr10: ρ_nomask=0.8252, ρ_masked=0.8362
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr12', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.7878, ρ_masked=0.8199
+     chr-kfold on train Val:['chr6', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.8259, ρ_masked=0.8408
+     chr-kfold Loco in Test chr10: ρ_nomask=0.7816, ρ_masked=0.8027
+     chr-kfold Loco in Train chr10: ρ_nomask=0.8338, ρ_masked=0.8459
+📊 Validation (all chr-kfold) in Test chr10: ρ_nomask=0.7834, ρ_masked=0.8034
+📊 Validation (all chr-kfold) in Train chr10: ρ_nomask=0.8293, ρ_masked=0.8387
+
+🚀 Outer Fold = Leave out chr11
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr13', 'chr18'] ρ_nomask=0.7759, ρ_masked=0.8078
+     chr-kfold on train Val:['chr2', 'chr7', 'chr13', 'chr18'] ρ_nomask=0.8248, ρ_masked=0.8415
+     chr-kfold Loco in Test chr11: ρ_nomask=0.7729, ρ_masked=0.8160
+     chr-kfold Loco in Train chr11: ρ_nomask=0.8340, ρ_masked=0.8656
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr14', 'chr19'] ρ_nomask=0.7978, ρ_masked=0.8213
+     chr-kfold on train Val:['chr3', 'chr8', 'chr14', 'chr19'] ρ_nomask=0.8450, ρ_masked=0.8564
+     chr-kfold Loco in Test chr11: ρ_nomask=0.7725, ρ_masked=0.8203
+     chr-kfold Loco in Train chr11: ρ_nomask=0.8329, ρ_masked=0.8610
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr15', 'chr20'] ρ_nomask=0.7754, ρ_masked=0.8027
+     chr-kfold on train Val:['chr4', 'chr9', 'chr15', 'chr20'] ρ_nomask=0.8331, ρ_masked=0.8505
+     chr-kfold Loco in Test chr11: ρ_nomask=0.7735, ρ_masked=0.8220
+     chr-kfold Loco in Train chr11: ρ_nomask=0.8338, ρ_masked=0.8636
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr10', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr16', 'chr21'] ρ_nomask=0.7724, ρ_masked=0.8065
+     chr-kfold on train Val:['chr5', 'chr10', 'chr16', 'chr21'] ρ_nomask=0.8291, ρ_masked=0.8413
+     chr-kfold Loco in Test chr11: ρ_nomask=0.7706, ρ_masked=0.8193
+     chr-kfold Loco in Train chr11: ρ_nomask=0.8339, ρ_masked=0.8605
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr12', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.7848, ρ_masked=0.8174
+     chr-kfold on train Val:['chr6', 'chr12', 'chr17', 'chr22'] ρ_nomask=0.8261, ρ_masked=0.8421
+     chr-kfold Loco in Test chr11: ρ_nomask=0.7712, ρ_masked=0.8213
+     chr-kfold Loco in Train chr11: ρ_nomask=0.8328, ρ_masked=0.8669
+📊 Validation (all chr-kfold) in Test chr11: ρ_nomask=0.7735, ρ_masked=0.8205
+📊 Validation (all chr-kfold) in Train chr11: ρ_nomask=0.8344, ρ_masked=0.8648
+
+🚀 Outer Fold = Leave out chr12
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr13', 'chr18'] ρ_nomask=0.7757, ρ_masked=0.8100
+     chr-kfold on train Val:['chr2', 'chr7', 'chr13', 'chr18'] ρ_nomask=0.8226, ρ_masked=0.8399
+     chr-kfold Loco in Test chr12: ρ_nomask=0.7859, ρ_masked=0.8192
+     chr-kfold Loco in Train chr12: ρ_nomask=0.8347, ρ_masked=0.8617
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr14', 'chr19'] ρ_nomask=0.7994, ρ_masked=0.8236
+     chr-kfold on train Val:['chr3', 'chr8', 'chr14', 'chr19'] ρ_nomask=0.8457, ρ_masked=0.8559
+     chr-kfold Loco in Test chr12: ρ_nomask=0.7872, ρ_masked=0.8212
+     chr-kfold Loco in Train chr12: ρ_nomask=0.8356, ρ_masked=0.8588
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr15', 'chr20'] ρ_nomask=0.7736, ρ_masked=0.8025
+     chr-kfold on train Val:['chr4', 'chr9', 'chr15', 'chr20'] ρ_nomask=0.8324, ρ_masked=0.8504
+     chr-kfold Loco in Test chr12: ρ_nomask=0.7867, ρ_masked=0.8237
+     chr-kfold Loco in Train chr12: ρ_nomask=0.8352, ρ_masked=0.8611
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr10', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr16', 'chr21'] ρ_nomask=0.7738, ρ_masked=0.8001
+     chr-kfold on train Val:['chr5', 'chr10', 'chr16', 'chr21'] ρ_nomask=0.8294, ρ_masked=0.8436
+     chr-kfold Loco in Test chr12: ρ_nomask=0.7841, ρ_masked=0.8177
+     chr-kfold Loco in Train chr12: ρ_nomask=0.8359, ρ_masked=0.8558
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr11', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr17', 'chr22'] ρ_nomask=0.7811, ρ_masked=0.8156
+     chr-kfold on train Val:['chr6', 'chr11', 'chr17', 'chr22'] ρ_nomask=0.8271, ρ_masked=0.8453
+     chr-kfold Loco in Test chr12: ρ_nomask=0.7877, ρ_masked=0.8256
+     chr-kfold Loco in Train chr12: ρ_nomask=0.8371, ρ_masked=0.8589
+📊 Validation (all chr-kfold) in Test chr12: ρ_nomask=0.7876, ρ_masked=0.8236
+📊 Validation (all chr-kfold) in Train chr12: ρ_nomask=0.8373, ρ_masked=0.8607
+
+🚀 Outer Fold = Leave out chr13
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr12', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr12', 'chr18'] ρ_nomask=0.7813, ρ_masked=0.8147
+     chr-kfold on train Val:['chr2', 'chr7', 'chr12', 'chr18'] ρ_nomask=0.8284, ρ_masked=0.8502
+     chr-kfold Loco in Test chr13: ρ_nomask=0.7462, ρ_masked=0.7854
+     chr-kfold Loco in Train chr13: ρ_nomask=0.7989, ρ_masked=0.7955
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr14', 'chr19'] ρ_nomask=0.7975, ρ_masked=0.8208
+     chr-kfold on train Val:['chr3', 'chr8', 'chr14', 'chr19'] ρ_nomask=0.8460, ρ_masked=0.8586
+     chr-kfold Loco in Test chr13: ρ_nomask=0.7556, ρ_masked=0.7852
+     chr-kfold Loco in Train chr13: ρ_nomask=0.7941, ρ_masked=0.8058
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr15', 'chr20'] ρ_nomask=0.7720, ρ_masked=0.8017
+     chr-kfold on train Val:['chr4', 'chr9', 'chr15', 'chr20'] ρ_nomask=0.8313, ρ_masked=0.8480
+     chr-kfold Loco in Test chr13: ρ_nomask=0.7462, ρ_masked=0.7895
+     chr-kfold Loco in Train chr13: ρ_nomask=0.7869, ρ_masked=0.7923
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr10', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr16', 'chr21'] ρ_nomask=0.7753, ρ_masked=0.8067
+     chr-kfold on train Val:['chr5', 'chr10', 'chr16', 'chr21'] ρ_nomask=0.8305, ρ_masked=0.8471
+     chr-kfold Loco in Test chr13: ρ_nomask=0.7453, ρ_masked=0.7741
+     chr-kfold Loco in Train chr13: ρ_nomask=0.7956, ρ_masked=0.7956
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr11', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr17', 'chr22'] ρ_nomask=0.7833, ρ_masked=0.8193
+     chr-kfold on train Val:['chr6', 'chr11', 'chr17', 'chr22'] ρ_nomask=0.8273, ρ_masked=0.8456
+     chr-kfold Loco in Test chr13: ρ_nomask=0.7550, ρ_masked=0.7712
+     chr-kfold Loco in Train chr13: ρ_nomask=0.7958, ρ_masked=0.8081
+📊 Validation (all chr-kfold) in Test chr13: ρ_nomask=0.7530, ρ_masked=0.7910
+📊 Validation (all chr-kfold) in Train chr13: ρ_nomask=0.7957, ρ_masked=0.8043
+
+🚀 Outer Fold = Leave out chr14
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr12', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr12', 'chr18'] ρ_nomask=0.7797, ρ_masked=0.8161
+     chr-kfold on train Val:['chr2', 'chr7', 'chr12', 'chr18'] ρ_nomask=0.8285, ρ_masked=0.8470
+     chr-kfold Loco in Test chr14: ρ_nomask=0.8141, ρ_masked=0.8432
+     chr-kfold Loco in Train chr14: ρ_nomask=0.8488, ρ_masked=0.8696
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr13', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr13', 'chr19'] ρ_nomask=0.7901, ρ_masked=0.8117
+     chr-kfold on train Val:['chr3', 'chr8', 'chr13', 'chr19'] ρ_nomask=0.8406, ρ_masked=0.8508
+     chr-kfold Loco in Test chr14: ρ_nomask=0.8168, ρ_masked=0.8491
+     chr-kfold Loco in Train chr14: ρ_nomask=0.8501, ρ_masked=0.8738
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr15', 'chr20'] ρ_nomask=0.7745, ρ_masked=0.8010
+     chr-kfold on train Val:['chr4', 'chr9', 'chr15', 'chr20'] ρ_nomask=0.8325, ρ_masked=0.8497
+     chr-kfold Loco in Test chr14: ρ_nomask=0.8179, ρ_masked=0.8576
+     chr-kfold Loco in Train chr14: ρ_nomask=0.8527, ρ_masked=0.8708
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr10', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr16', 'chr21'] ρ_nomask=0.7732, ρ_masked=0.8042
+     chr-kfold on train Val:['chr5', 'chr10', 'chr16', 'chr21'] ρ_nomask=0.8302, ρ_masked=0.8424
+     chr-kfold Loco in Test chr14: ρ_nomask=0.8176, ρ_masked=0.8402
+     chr-kfold Loco in Train chr14: ρ_nomask=0.8526, ρ_masked=0.8707
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr11', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr17', 'chr22'] ρ_nomask=0.7813, ρ_masked=0.8149
+     chr-kfold on train Val:['chr6', 'chr11', 'chr17', 'chr22'] ρ_nomask=0.8274, ρ_masked=0.8440
+     chr-kfold Loco in Test chr14: ρ_nomask=0.8188, ρ_masked=0.8509
+     chr-kfold Loco in Train chr14: ρ_nomask=0.8520, ρ_masked=0.8674
+📊 Validation (all chr-kfold) in Test chr14: ρ_nomask=0.8187, ρ_masked=0.8534
+📊 Validation (all chr-kfold) in Train chr14: ρ_nomask=0.8526, ρ_masked=0.8737
+
+🚀 Outer Fold = Leave out chr15
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr12', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr12', 'chr18'] ρ_nomask=0.7802, ρ_masked=0.8159
+     chr-kfold on train Val:['chr2', 'chr7', 'chr12', 'chr18'] ρ_nomask=0.8300, ρ_masked=0.8508
+     chr-kfold Loco in Test chr15: ρ_nomask=0.7974, ρ_masked=0.8254
+     chr-kfold Loco in Train chr15: ρ_nomask=0.8374, ρ_masked=0.8541
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr13', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr13', 'chr19'] ρ_nomask=0.7898, ρ_masked=0.8100
+     chr-kfold on train Val:['chr3', 'chr8', 'chr13', 'chr19'] ρ_nomask=0.8413, ρ_masked=0.8495
+     chr-kfold Loco in Test chr15: ρ_nomask=0.7960, ρ_masked=0.8300
+     chr-kfold Loco in Train chr15: ρ_nomask=0.8354, ρ_masked=0.8572
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr14', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr14', 'chr20'] ρ_nomask=0.7812, ρ_masked=0.8124
+     chr-kfold on train Val:['chr4', 'chr9', 'chr14', 'chr20'] ρ_nomask=0.8364, ρ_masked=0.8524
+     chr-kfold Loco in Test chr15: ρ_nomask=0.7974, ρ_masked=0.8219
+     chr-kfold Loco in Train chr15: ρ_nomask=0.8358, ρ_masked=0.8616
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr10', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr16', 'chr21'] ρ_nomask=0.7727, ρ_masked=0.8006
+     chr-kfold on train Val:['chr5', 'chr10', 'chr16', 'chr21'] ρ_nomask=0.8299, ρ_masked=0.8434
+     chr-kfold Loco in Test chr15: ρ_nomask=0.7976, ρ_masked=0.8259
+     chr-kfold Loco in Train chr15: ρ_nomask=0.8339, ρ_masked=0.8580
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr11', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr17', 'chr22'] ρ_nomask=0.7817, ρ_masked=0.8144
+     chr-kfold on train Val:['chr6', 'chr11', 'chr17', 'chr22'] ρ_nomask=0.8278, ρ_masked=0.8444
+     chr-kfold Loco in Test chr15: ρ_nomask=0.7998, ρ_masked=0.8295
+     chr-kfold Loco in Train chr15: ρ_nomask=0.8349, ρ_masked=0.8593
+📊 Validation (all chr-kfold) in Test chr15: ρ_nomask=0.7992, ρ_masked=0.8298
+📊 Validation (all chr-kfold) in Train chr15: ρ_nomask=0.8371, ρ_masked=0.8595
+
+🚀 Outer Fold = Leave out chr16
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr12', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr12', 'chr18'] ρ_nomask=0.7802, ρ_masked=0.8135
+     chr-kfold on train Val:['chr2', 'chr7', 'chr12', 'chr18'] ρ_nomask=0.8293, ρ_masked=0.8483
+     chr-kfold Loco in Test chr16: ρ_nomask=0.7595, ρ_masked=0.7791
+     chr-kfold Loco in Train chr16: ρ_nomask=0.8049, ρ_masked=0.8126
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr13', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr13', 'chr19'] ρ_nomask=0.7895, ρ_masked=0.8147
+     chr-kfold on train Val:['chr3', 'chr8', 'chr13', 'chr19'] ρ_nomask=0.8398, ρ_masked=0.8489
+     chr-kfold Loco in Test chr16: ρ_nomask=0.7626, ρ_masked=0.7860
+     chr-kfold Loco in Train chr16: ρ_nomask=0.8005, ρ_masked=0.8058
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr14', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr14', 'chr20'] ρ_nomask=0.7805, ρ_masked=0.8130
+     chr-kfold on train Val:['chr4', 'chr9', 'chr14', 'chr20'] ρ_nomask=0.8359, ρ_masked=0.8521
+     chr-kfold Loco in Test chr16: ρ_nomask=0.7584, ρ_masked=0.7868
+     chr-kfold Loco in Train chr16: ρ_nomask=0.8051, ρ_masked=0.8153
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr10', 'chr15', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr15', 'chr21'] ρ_nomask=0.7851, ρ_masked=0.8178
+     chr-kfold on train Val:['chr5', 'chr10', 'chr15', 'chr21'] ρ_nomask=0.8394, ρ_masked=0.8558
+     chr-kfold Loco in Test chr16: ρ_nomask=0.7568, ρ_masked=0.7806
+     chr-kfold Loco in Train chr16: ρ_nomask=0.8064, ρ_masked=0.8170
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr11', 'chr17', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr17', 'chr22'] ρ_nomask=0.7800, ρ_masked=0.8190
+     chr-kfold on train Val:['chr6', 'chr11', 'chr17', 'chr22'] ρ_nomask=0.8266, ρ_masked=0.8429
+     chr-kfold Loco in Test chr16: ρ_nomask=0.7608, ρ_masked=0.7836
+     chr-kfold Loco in Train chr16: ρ_nomask=0.8030, ρ_masked=0.8093
+📊 Validation (all chr-kfold) in Test chr16: ρ_nomask=0.7616, ρ_masked=0.7869
+📊 Validation (all chr-kfold) in Train chr16: ρ_nomask=0.8056, ρ_masked=0.8152
+
+🚀 Outer Fold = Leave out chr17
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr12', 'chr18']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr12', 'chr18'] ρ_nomask=0.7833, ρ_masked=0.8173
+     chr-kfold on train Val:['chr2', 'chr7', 'chr12', 'chr18'] ρ_nomask=0.8288, ρ_masked=0.8505
+     chr-kfold Loco in Test chr17: ρ_nomask=0.7692, ρ_masked=0.7966
+     chr-kfold Loco in Train chr17: ρ_nomask=0.8212, ρ_masked=0.8408
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr13', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr13', 'chr19'] ρ_nomask=0.7919, ρ_masked=0.8155
+     chr-kfold on train Val:['chr3', 'chr8', 'chr13', 'chr19'] ρ_nomask=0.8412, ρ_masked=0.8502
+     chr-kfold Loco in Test chr17: ρ_nomask=0.7729, ρ_masked=0.8067
+     chr-kfold Loco in Train chr17: ρ_nomask=0.8165, ρ_masked=0.8322
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr14', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr14', 'chr20'] ρ_nomask=0.7801, ρ_masked=0.8115
+     chr-kfold on train Val:['chr4', 'chr9', 'chr14', 'chr20'] ρ_nomask=0.8357, ρ_masked=0.8515
+     chr-kfold Loco in Test chr17: ρ_nomask=0.7690, ρ_masked=0.7991
+     chr-kfold Loco in Train chr17: ρ_nomask=0.8175, ρ_masked=0.8352
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr10', 'chr15', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr15', 'chr21'] ρ_nomask=0.7858, ρ_masked=0.8174
+     chr-kfold on train Val:['chr5', 'chr10', 'chr15', 'chr21'] ρ_nomask=0.8392, ρ_masked=0.8571
+     chr-kfold Loco in Test chr17: ρ_nomask=0.7704, ρ_masked=0.8022
+     chr-kfold Loco in Train chr17: ρ_nomask=0.8190, ρ_masked=0.8402
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr11', 'chr16', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr16', 'chr22'] ρ_nomask=0.7800, ρ_masked=0.8147
+     chr-kfold on train Val:['chr6', 'chr11', 'chr16', 'chr22'] ρ_nomask=0.8237, ρ_masked=0.8360
+     chr-kfold Loco in Test chr17: ρ_nomask=0.7684, ρ_masked=0.8066
+     chr-kfold Loco in Train chr17: ρ_nomask=0.8195, ρ_masked=0.8411
+📊 Validation (all chr-kfold) in Test chr17: ρ_nomask=0.7719, ρ_masked=0.8053
+📊 Validation (all chr-kfold) in Train chr17: ρ_nomask=0.8203, ρ_masked=0.8396
+
+🚀 Outer Fold = Leave out chr18
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr12', 'chr17']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr12', 'chr17'] ρ_nomask=0.7806, ρ_masked=0.8110
+     chr-kfold on train Val:['chr2', 'chr7', 'chr12', 'chr17'] ρ_nomask=0.8279, ρ_masked=0.8477
+     chr-kfold Loco in Test chr18: ρ_nomask=0.7634, ρ_masked=0.8293
+     chr-kfold Loco in Train chr18: ρ_nomask=0.8103, ρ_masked=0.8581
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr13', 'chr19']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr13', 'chr19'] ρ_nomask=0.7920, ρ_masked=0.8118
+     chr-kfold on train Val:['chr3', 'chr8', 'chr13', 'chr19'] ρ_nomask=0.8418, ρ_masked=0.8495
+     chr-kfold Loco in Test chr18: ρ_nomask=0.7572, ρ_masked=0.7931
+     chr-kfold Loco in Train chr18: ρ_nomask=0.8195, ρ_masked=0.8642
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr14', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr14', 'chr20'] ρ_nomask=0.7805, ρ_masked=0.8129
+     chr-kfold on train Val:['chr4', 'chr9', 'chr14', 'chr20'] ρ_nomask=0.8365, ρ_masked=0.8521
+     chr-kfold Loco in Test chr18: ρ_nomask=0.7641, ρ_masked=0.8272
+     chr-kfold Loco in Train chr18: ρ_nomask=0.8193, ρ_masked=0.8619
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr10', 'chr15', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr15', 'chr21'] ρ_nomask=0.7845, ρ_masked=0.8178
+     chr-kfold on train Val:['chr5', 'chr10', 'chr15', 'chr21'] ρ_nomask=0.8393, ρ_masked=0.8571
+     chr-kfold Loco in Test chr18: ρ_nomask=0.7592, ρ_masked=0.8077
+     chr-kfold Loco in Train chr18: ρ_nomask=0.8187, ρ_masked=0.8625
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr11', 'chr16', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr16', 'chr22'] ρ_nomask=0.7807, ρ_masked=0.8099
+     chr-kfold on train Val:['chr6', 'chr11', 'chr16', 'chr22'] ρ_nomask=0.8241, ρ_masked=0.8367
+     chr-kfold Loco in Test chr18: ρ_nomask=0.7602, ρ_masked=0.8246
+     chr-kfold Loco in Train chr18: ρ_nomask=0.8144, ρ_masked=0.8587
+📊 Validation (all chr-kfold) in Test chr18: ρ_nomask=0.7628, ρ_masked=0.8188
+📊 Validation (all chr-kfold) in Train chr18: ρ_nomask=0.8181, ρ_masked=0.8672
+
+🚀 Outer Fold = Leave out chr19
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr12', 'chr17']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr12', 'chr17'] ρ_nomask=0.7815, ρ_masked=0.8121
+     chr-kfold on train Val:['chr2', 'chr7', 'chr12', 'chr17'] ρ_nomask=0.8271, ρ_masked=0.8472
+     chr-kfold Loco in Test chr19: ρ_nomask=0.7907, ρ_masked=0.8021
+     chr-kfold Loco in Train chr19: ρ_nomask=0.8374, ρ_masked=0.8446
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.7859, ρ_masked=0.8168
+     chr-kfold on train Val:['chr3', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.8402, ρ_masked=0.8537
+     chr-kfold Loco in Test chr19: ρ_nomask=0.7961, ρ_masked=0.8074
+     chr-kfold Loco in Train chr19: ρ_nomask=0.8393, ρ_masked=0.8475
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr14', 'chr20']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr14', 'chr20'] ρ_nomask=0.7805, ρ_masked=0.8112
+     chr-kfold on train Val:['chr4', 'chr9', 'chr14', 'chr20'] ρ_nomask=0.8361, ρ_masked=0.8529
+     chr-kfold Loco in Test chr19: ρ_nomask=0.7918, ρ_masked=0.8058
+     chr-kfold Loco in Train chr19: ρ_nomask=0.8382, ρ_masked=0.8441
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr10', 'chr15', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr15', 'chr21'] ρ_nomask=0.7862, ρ_masked=0.8162
+     chr-kfold on train Val:['chr5', 'chr10', 'chr15', 'chr21'] ρ_nomask=0.8387, ρ_masked=0.8556
+     chr-kfold Loco in Test chr19: ρ_nomask=0.7941, ρ_masked=0.8076
+     chr-kfold Loco in Train chr19: ρ_nomask=0.8392, ρ_masked=0.8468
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr11', 'chr16', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr16', 'chr22'] ρ_nomask=0.7822, ρ_masked=0.8151
+     chr-kfold on train Val:['chr6', 'chr11', 'chr16', 'chr22'] ρ_nomask=0.8225, ρ_masked=0.8350
+     chr-kfold Loco in Test chr19: ρ_nomask=0.7909, ρ_masked=0.8073
+     chr-kfold Loco in Train chr19: ρ_nomask=0.8359, ρ_masked=0.8442
+📊 Validation (all chr-kfold) in Test chr19: ρ_nomask=0.7946, ρ_masked=0.8077
+📊 Validation (all chr-kfold) in Train chr19: ρ_nomask=0.8395, ρ_masked=0.8465
+
+🚀 Outer Fold = Leave out chr20
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr12', 'chr17']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr12', 'chr17'] ρ_nomask=0.7804, ρ_masked=0.8130
+     chr-kfold on train Val:['chr2', 'chr7', 'chr12', 'chr17'] ρ_nomask=0.8277, ρ_masked=0.8513
+     chr-kfold Loco in Test chr20: ρ_nomask=0.7610, ρ_masked=0.7890
+     chr-kfold Loco in Train chr20: ρ_nomask=0.8223, ρ_masked=0.8359
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.7847, ρ_masked=0.8174
+     chr-kfold on train Val:['chr3', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.8403, ρ_masked=0.8547
+     chr-kfold Loco in Test chr20: ρ_nomask=0.7632, ρ_masked=0.7971
+     chr-kfold Loco in Train chr20: ρ_nomask=0.8261, ρ_masked=0.8383
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.7891, ρ_masked=0.8132
+     chr-kfold on train Val:['chr4', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.8412, ρ_masked=0.8541
+     chr-kfold Loco in Test chr20: ρ_nomask=0.7599, ρ_masked=0.7860
+     chr-kfold Loco in Train chr20: ρ_nomask=0.8241, ρ_masked=0.8325
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr10', 'chr15', 'chr21']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr15', 'chr21'] ρ_nomask=0.7853, ρ_masked=0.8156
+     chr-kfold on train Val:['chr5', 'chr10', 'chr15', 'chr21'] ρ_nomask=0.8390, ρ_masked=0.8588
+     chr-kfold Loco in Test chr20: ρ_nomask=0.7617, ρ_masked=0.7887
+     chr-kfold Loco in Train chr20: ρ_nomask=0.8257, ρ_masked=0.8366
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr11', 'chr16', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr16', 'chr22'] ρ_nomask=0.7817, ρ_masked=0.8154
+     chr-kfold on train Val:['chr6', 'chr11', 'chr16', 'chr22'] ρ_nomask=0.8249, ρ_masked=0.8367
+     chr-kfold Loco in Test chr20: ρ_nomask=0.7625, ρ_masked=0.7978
+     chr-kfold Loco in Train chr20: ρ_nomask=0.8254, ρ_masked=0.8350
+📊 Validation (all chr-kfold) in Test chr20: ρ_nomask=0.7642, ρ_masked=0.7949
+📊 Validation (all chr-kfold) in Train chr20: ρ_nomask=0.8267, ρ_masked=0.8387
+
+🚀 Outer Fold = Leave out chr21
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr12', 'chr17']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr12', 'chr17'] ρ_nomask=0.7802, ρ_masked=0.8130
+     chr-kfold on train Val:['chr2', 'chr7', 'chr12', 'chr17'] ρ_nomask=0.8270, ρ_masked=0.8488
+     chr-kfold Loco in Test chr21: ρ_nomask=0.7411, ρ_masked=0.8031
+     chr-kfold Loco in Train chr21: ρ_nomask=0.8043, ρ_masked=0.8490
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.7845, ρ_masked=0.8172
+     chr-kfold on train Val:['chr3', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.8409, ρ_masked=0.8538
+     chr-kfold Loco in Test chr21: ρ_nomask=0.7349, ρ_masked=0.8135
+     chr-kfold Loco in Train chr21: ρ_nomask=0.8144, ρ_masked=0.8494
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.7885, ρ_masked=0.8088
+     chr-kfold on train Val:['chr4', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.8399, ρ_masked=0.8534
+     chr-kfold Loco in Test chr21: ρ_nomask=0.7336, ρ_masked=0.8179
+     chr-kfold Loco in Train chr21: ρ_nomask=0.8019, ρ_masked=0.8303
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr10', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.7827, ρ_masked=0.8085
+     chr-kfold on train Val:['chr5', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.8379, ρ_masked=0.8554
+     chr-kfold Loco in Test chr21: ρ_nomask=0.7372, ρ_masked=0.8113
+     chr-kfold Loco in Train chr21: ρ_nomask=0.8119, ρ_masked=0.8368
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr11', 'chr16', 'chr22']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr16', 'chr22'] ρ_nomask=0.7803, ρ_masked=0.8140
+     chr-kfold on train Val:['chr6', 'chr11', 'chr16', 'chr22'] ρ_nomask=0.8240, ρ_masked=0.8349
+     chr-kfold Loco in Test chr21: ρ_nomask=0.7304, ρ_masked=0.8191
+     chr-kfold Loco in Train chr21: ρ_nomask=0.8081, ρ_masked=0.8547
+📊 Validation (all chr-kfold) in Test chr21: ρ_nomask=0.7358, ρ_masked=0.8155
+📊 Validation (all chr-kfold) in Train chr21: ρ_nomask=0.8101, ρ_masked=0.8453
+
+🚀 Outer Fold = Leave out chr22
+  ⚙️ Inner Fold 1 | val_chrs=['chr2', 'chr7', 'chr12', 'chr17']
+     chr-kfold on test Val:['chr2', 'chr7', 'chr12', 'chr17'] ρ_nomask=0.7813, ρ_masked=0.8113
+     chr-kfold on train Val:['chr2', 'chr7', 'chr12', 'chr17'] ρ_nomask=0.8284, ρ_masked=0.8478
+     chr-kfold Loco in Test chr22: ρ_nomask=0.7912, ρ_masked=0.8234
+     chr-kfold Loco in Train chr22: ρ_nomask=0.8128, ρ_masked=0.8251
+  ⚙️ Inner Fold 2 | val_chrs=['chr3', 'chr8', 'chr13', 'chr18']
+     chr-kfold on test Val:['chr3', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.7837, ρ_masked=0.8176
+     chr-kfold on train Val:['chr3', 'chr8', 'chr13', 'chr18'] ρ_nomask=0.8397, ρ_masked=0.8506
+     chr-kfold Loco in Test chr22: ρ_nomask=0.7918, ρ_masked=0.8171
+     chr-kfold Loco in Train chr22: ρ_nomask=0.8136, ρ_masked=0.8267
+  ⚙️ Inner Fold 3 | val_chrs=['chr4', 'chr9', 'chr14', 'chr19']
+     chr-kfold on test Val:['chr4', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.7901, ρ_masked=0.8148
+     chr-kfold on train Val:['chr4', 'chr9', 'chr14', 'chr19'] ρ_nomask=0.8410, ρ_masked=0.8526
+     chr-kfold Loco in Test chr22: ρ_nomask=0.7992, ρ_masked=0.8276
+     chr-kfold Loco in Train chr22: ρ_nomask=0.8158, ρ_masked=0.8271
+  ⚙️ Inner Fold 4 | val_chrs=['chr5', 'chr10', 'chr15', 'chr20']
+     chr-kfold on test Val:['chr5', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.7827, ρ_masked=0.8089
+     chr-kfold on train Val:['chr5', 'chr10', 'chr15', 'chr20'] ρ_nomask=0.8378, ρ_masked=0.8541
+     chr-kfold Loco in Test chr22: ρ_nomask=0.7977, ρ_masked=0.8263
+     chr-kfold Loco in Train chr22: ρ_nomask=0.8153, ρ_masked=0.8278
+  ⚙️ Inner Fold 5 | val_chrs=['chr6', 'chr11', 'chr16', 'chr21']
+     chr-kfold on test Val:['chr6', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.7759, ρ_masked=0.8121
+     chr-kfold on train Val:['chr6', 'chr11', 'chr16', 'chr21'] ρ_nomask=0.8248, ρ_masked=0.8377
+     chr-kfold Loco in Test chr22: ρ_nomask=0.7922, ρ_masked=0.8262
+     chr-kfold Loco in Train chr22: ρ_nomask=0.8143, ρ_masked=0.8225
+📊 Validation (all chr-kfold) in Test chr22: ρ_nomask=0.7960, ρ_masked=0.8199
+📊 Validation (all chr-kfold) in Train chr22: ρ_nomask=0.8159, ρ_masked=0.8272
+✅ Generated predictions for unlabeled test (1984 samples)
+
+===== Outer Fold and Test Summary =====
+outer_chr  rho_outer_train_nomask  rho_outer_train_masked  rho_outer_test_nomask  rho_outer_test_masked
+     chr2                0.821438                0.832920               0.780954               0.817633
+     chr3                0.854284                0.859841               0.802524               0.827540
+     chr4                0.832071                0.851780               0.776555               0.814506
+     chr5                0.857757                0.876406               0.788467               0.822428
+     chr6                0.815924                0.818225               0.786114               0.812140
+     chr7                0.836124                0.860269               0.785055               0.816495
+     chr8                0.842747                0.867597               0.780913               0.821282
+     chr9                0.836526                0.852511               0.760530               0.776293
+    chr10                0.829341                0.838739               0.783371               0.803390
+    chr11                0.834445                0.864814               0.773507               0.820482
+    chr12                0.837264                0.860745               0.787621               0.823598
+    chr13                0.795662                0.804288               0.753046               0.791024
+    chr14                0.852593                0.873708               0.818741               0.853357
+    chr15                0.837136                0.859501               0.799169               0.829825
+    chr16                0.805566                0.815205               0.761558               0.786903
+    chr17                0.820308                0.839598               0.771904               0.805270
+    chr18                0.818096                0.867245               0.762801               0.818836
+    chr19                0.839508                0.846477               0.794571               0.807730
+    chr20                0.826728                0.838705               0.764230               0.794935
+    chr21                0.810052                0.845327               0.735793               0.815484
+    chr22                0.815872                0.827190               0.796002               0.819949
+
+Mean outer train ρ_nomask=0.8295
+Mean outer train ρ_masked=0.8477
+Mean outer test ρ_nomask=0.7792
+Mean outer test ρ_masked=0.8133
