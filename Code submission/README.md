@@ -106,7 +106,7 @@ I use **LightGBM (LGBM)** for both binary classification (is expression > 0?) an
     
 | Different threshold vs performance | Different strategies of masking |
 |:-------------------------:|:---------------:|
-| <img src="/plot/threshold%20of%20binary.png" width="420"/> | <img src="/plot/mask%20methods%20LOCO%20k-fold.png" width="440"/> |
+| <img src="./plot/threshold%20of%20binary.png" width="420"/> | <img src="./plot/mask%20methods%20LOCO%20k-fold.png" width="440"/> |
 
 
 ---
@@ -116,16 +116,13 @@ I use **LightGBM (LGBM)** for both binary classification (is expression > 0?) an
 * Leave-Chromosome-Out (chr2–chr22): generalization to unseen regions; avoids positional leakage
 * K-Fold on genes: overall robustness
 
-
 ---
 
 ## Results
 
-
 | Mask on unseen cell line | Mask on seen cell line|
 |:-------------------------:|:---------------:|
-| <img src="/plot/see%20mask%20on%20unseen%20cell%20line.png" width="490"/> | <img src="/plot/see%20mask%20on%20the%20same%20cell%20line.png" width="420"/> |
-
+| <img src="./plot/see%20mask%20on%20unseen%20cell%20line.png" width="490"/> | <img src="./plot/see%20mask%20on%20the%20same%20cell%20line.png" width="420"/> |
 
 The mask significantly improves predictions in most settings. One exception: when mixing X1+X2 to train models, masking can hurt. However, this does not necessarily indicate degradation. Mixing encourages the model to learn a more general decision boundary across two data domains (X1 and X2) that have different noise characteristics and distributions. Even on the same chromosome and the same gene, X1 and X2 can show distinct distributions in histone marks (see EDA.ipynb). To remain reliable under “the same gene but different distributions,” the model may trade a small amount of single-domain performance in the short term for better generalization. Based on this, I therefore also stack the mixed (X1+X2) binary and regression models with the within-cell-line models (averaging by task) so they complement each other’s weaknesses and improve cross-domain robustness.
 
@@ -141,20 +138,19 @@ Given this, I use within–cell-line validation as the basis for model selection
 
 | Both direction TSS | One direction TSS |
 |:----------:|:--------:|
-| <img src="/plot/compare%20training%20on%20diff%20dataset%28Both%20side%29.png" width="95%"/> | <img src="/plot/compare%20training%20on%20diff%20dataset%28one%20side%29.png" width="95%"/> |
+| <img src="./plot/compare%20training%20on%20diff%20dataset%28Both%20side%29.png" width="95%"/> | <img src="./plot/compare%20training%20on%20diff%20dataset%28one%20side%29.png" width="95%"/> |
 
 * TSS window: strand-aware one-sided outperforms symmetric both-sides. 100 bp is the sweet spot; performance drops beyond 100 bp (tested 50–5000 bp)
   
 | Both-sided VS one-sided TSS | The size of TSS |
 |:-------------------------:|:---------------:|
-| <img src="/plot/tss%20windows%20chrom_kfold.png" width="420"/> | <img src="/plot/tss%20one%20side.png" width="435"/> |
-
+| <img src="./plot/tss%20windows%20chrom_kfold.png" width="420"/> | <img src="./plot/tss%20one%20side.png" width="435"/> |
 
 ---
 
 ## 🔍 Model Interpretation (SHAP on LGBM)
 
-![SHAP analysis](/plot/SHAP%20analyze.png)
+![SHAP analysis](./plot/SHAP%20analyze.png)
 
 According to the top important features, we could see that the model focuses on how open the promoter is (DNase) and whether it’s more open than the gene body. If the promoter is uniformly open and more open than the body, the gene is likely on.
 
