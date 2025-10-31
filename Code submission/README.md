@@ -1,11 +1,11 @@
-# 🧬 ML4G Project 1 — Predicting Gene Expression from Epigenomic Signals
+# ML4G Project 1 — Predicting Gene Expression from Epigenomic Signals
 
 > Predict gene expression for unseen cell lines using epigenomic features.
 > LightGBM + robust preprocessing, complementary features, and chromosome-aware validation.
 
 ---
 
-## 📘 What this repo does
+## What this repo does
 
 * Loads histone marks (H3K27ac, H3K4me3, H3K27me3, H3K36me3, H3K4me1, H3K9me3) and DNase from BED (peaks) and bigWig (continuous signal).
 * Preprocesses signals with `log1p` → z-score to tame outliers and reduce batch effects.
@@ -16,7 +16,7 @@
 
 ---
 
-## 📂 Data
+## Data
 
 * CAGE: `gex` targets and gene info (`gene_name, chr, gene_start, gene_end, TSS_start, TSS_end, strand`)
 * ChIP-seq marks: H3K27me3, H3K4me1, H3K4me3, H3K27ac, H3K36me3, H3K9me3
@@ -25,7 +25,7 @@
 
 ---
 
-## 🧱 Preprocessing
+## Preprocessing
 
 Why: biological signals are heavy-tailed; different cell lines show scale shifts (batch effects).
 
@@ -35,7 +35,7 @@ Why: biological signals are heavy-tailed; different cell lines show scale shifts
 
 ---
 
-## 🧩 Feature Engineering (high-level)
+## Feature Engineering (high-level)
 
 I fuse BED and bigWig because they are complementary.
 
@@ -57,7 +57,7 @@ Implemented families (see `feature_engineer.py`):
 
 ---
 
-## 🧪 Feature Selection (cross–cell-line & robust)
+## Feature Selection (cross–cell-line & robust)
 
 After building a large feature set from BED + bigWig, I select a subset of the features that **transfers across cell lines** (so it’s more likely to work on X3). I use **cross–cell-line SHAP** to rank features by importance and stability, then optionally prune redundancy.
 
@@ -72,13 +72,13 @@ After building a large feature set from BED + bigWig, I select a subset of the f
 
 ---
 
-## 🧠 Model & Why LightGBM
+## Model & Why LightGBM
 
 I use **LightGBM (LGBM)** for both binary classification (is expression > 0?) and rank regression (predict normalized global rank). The reason I used this model is because it is fast, strong on tabular data, and captures non-linear interactions well. Stacking more model families can help, but in this setup LGBM alone performs strongly.
 
 ---
 
-## 🎯 Training Strategy
+## Training Strategy
 
 ### Two-stage prediction
 
@@ -111,7 +111,7 @@ I use **LightGBM (LGBM)** for both binary classification (is expression > 0?) an
 
 ---
 
-## 🧪 Validation
+## Validation
 
 * Leave-Chromosome-Out (chr2–chr22): generalization to unseen regions; avoids positional leakage
 * K-Fold on genes: overall robustness
@@ -148,7 +148,7 @@ Given this, I use within–cell-line validation as the basis for model selection
 
 ---
 
-## 🔍 Model Interpretation (SHAP on LGBM)
+## Model Interpretation (SHAP on LGBM)
 
 ![SHAP analysis](./plot/SHAP%20analyze.png)
 
@@ -156,7 +156,7 @@ According to the top important features, we could see that the model focuses on 
 
 ---
 
-## ⚙️ Environment
+## Environment
 
 * **Platform:** macOS (Apple Silicon **M1**). All experiments and scripts were developed and tested on Mac (M1).
 * **Important:** The **bigWig** processing pipeline depends on `pyBigWig`. Native Windows setups are **not supported/reliable** for this step. For reproduction on Windows, use **WSL2 (Ubuntu)** or a Linux/macOS machine.
@@ -164,14 +164,14 @@ According to the top important features, we could see that the model focuses on 
 
 ---
 
-## 🔁 Reproducibility
+## Reproducibility
 
 * Scripts are modular and numbered; run them **in order**.
 * If you are on Windows, run the feature extraction steps that use bigWig **inside WSL2/Linux** (or on macOS) to avoid `pyBigWig` issues.
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under **CC BY-NC 4.0** (non-commercial, attribution required).  
 
