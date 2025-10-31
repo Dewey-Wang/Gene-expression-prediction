@@ -50,7 +50,7 @@ Code submission/
 
 ---
 
-## 🚀 Reproduce My Results
+## Reproduce My Results
 
 ### Option A — Docker (no local setup)
 
