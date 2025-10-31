@@ -25,7 +25,7 @@ Full details, ablations, and SHAP interpretation live in **[`Code submission/`](
 
 ---
 
-## 🗂 Full pipeline (see `Code submission/`)
+## Full pipeline (see `Code submission/`)
 
 All numbered notebooks, plots, configs, and outputs are under **Code submission/**, e.g.:
 
