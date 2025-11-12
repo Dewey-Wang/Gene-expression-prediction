@@ -94,8 +94,6 @@ I use **LightGBM (LGBM)** for both binary classification (is expression > 0?) an
   1. X1+X2 pooled: mix X1+X2 for train/val
   2. X1-only: train/val on X1
   3. X2-only: train/val on X2
-  4. X1 cross cell line validation: train on X1, val on X2 (Didn't use in stacking. See result section for detail.)
-  5. X2 cross cell line validation: train on X2, val on X1 (Didn't use in stacking. See result section for detail.)
 
 * Stacking rule:
 
