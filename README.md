@@ -123,7 +123,7 @@ Please cite:
   author       = {Wang, Ding-Yang},
   title        = {ML4G Project 1 – Predicting Gene Expression from Epigenomic Signals},
   year         = {2025},
-  howpublished = {\url{https://github.com/<your-repo>}},
+  howpublished = {\url{https://github.com/Dewey-Wang/Gene-expression-prediction/}},
   note         = {Non-commercial use; citation required}
 }
 ```
