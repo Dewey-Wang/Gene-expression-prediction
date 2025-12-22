@@ -1,9 +1,9 @@
-# 🧬 ML4G Project 1 — Predicting Gene Expression from Epigenomic Signals
+# ML4G Project 1 — Predicting Gene Expression from Epigenomic Signals
 
 > Predict gene expression for unseen cell lines using epigenomic features.
 > LightGBM + robust preprocessing, complementary features, and chromosome-aware validation.
 
-**🏅 Result:** Ranked **1st** in **ETH Zürich – Machine Learning for Genomics (263-5351-00L, HS2025)** Project 1, supervised by **Prof. Valentina Boeva** (Head TA: **Lovro Rabuzin**).
+**Result:** Ranked **1st** in **ETH Zürich – Machine Learning for Genomics (263-5351-00L, HS2025)** Project 1, supervised by **Prof. Valentina Boeva** (Head TA: **Lovro Rabuzin**).
 
 See the full project description here: [ML4G_Project_1_2025.pdf](./ML4G_Project_1_2025.pdf)
 
@@ -12,7 +12,7 @@ If you only need a quick start, see the **[Reproduction](#-Reproduce-My-Results)
 
 ---
 
-## 📘 What this repo does (short)
+## What this repo does (short)
 
 * Loads histone marks (H3K27ac, H3K4me3, H3K27me3, H3K36me3, H3K4me1, H3K9me3) + DNase (BED + bigWig).
 * Preprocesses with **log1p → per-mark z-score** (“log-z”) to reduce outliers/batch effects.
@@ -21,11 +21,11 @@ If you only need a quick start, see the **[Reproduction](#-Reproduce-My-Results)
 * Validates with **LOCO** + chr-aware K-Fold; applies **probability masking**.
 * Final ensemble/stacking + ready-to-submit outputs.
 
-👉 Full details, ablations, and SHAP interpretation live in **`Code submission/`**.
+Full details, ablations, and SHAP interpretation live in **[`Code submission/`](./Code%20submission/)**.
 
 ---
 
-## 🗂 Full pipeline (see `Code submission/`)
+## Full pipeline (see `Code submission/`)
 
 All numbered notebooks, plots, configs, and outputs are under **Code submission/**, e.g.:
 
@@ -50,7 +50,7 @@ Code submission/
 
 ---
 
-## 🚀 Reproduce My Results
+## Reproduce My Results
 
 ### Option A — Docker (no local setup)
 
@@ -70,7 +70,7 @@ Your current folder is mounted to **/workspace** in the container.
 
 ### Option B — Run Locally (.venv / pip)
 
-> ✅ Everything installs into **`.venv`** and won’t touch your global Python.
+> Everything installs into **`.venv`** and won’t touch your global Python.
 
 ```bash
 make init                  # Step 1: create venv and install deps
@@ -92,7 +92,7 @@ make reset   # clean everything and reinitialize from scratch
 
 ---
 
-## 📂 Data
+## Data
 
 The **ML4G_Project_1_Data** folder data is available via **Polybox**:
 **Link:** [https://polybox.ethz.ch/index.php/s/XJZFdLSZNHpEDLw](https://polybox.ethz.ch/index.php/s/XJZFdLSZNHpEDLw)
@@ -102,7 +102,7 @@ Place downloaded data under the repo root (the Docker command above mounts it to
 
 ---
 
-## ⚙️ Environment
+## Environment
 
 * Dev platform: **macOS (Apple Silicon M1)**.
 * `pyBigWig` requires Linux/macOS toolchains. For Windows, use **WSL2** or Docker.
@@ -110,7 +110,7 @@ Place downloaded data under the repo root (the Docker command above mounts it to
 
 ---
 
-## 📜 License & Citation
+## License & Citation
 
 **CC BY-NC 4.0** (non-commercial, attribution required).
 
@@ -123,7 +123,7 @@ Please cite:
   author       = {Wang, Ding-Yang},
   title        = {ML4G Project 1 – Predicting Gene Expression from Epigenomic Signals},
   year         = {2025},
-  howpublished = {\url{https://github.com/<your-repo>}},
+  howpublished = {\url{https://github.com/Dewey-Wang/Gene-expression-prediction/}},
   note         = {Non-commercial use; citation required}
 }
 ```
