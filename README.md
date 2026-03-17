@@ -96,7 +96,7 @@ make reset   # clean everything and reinitialize from scratch
 
 The full dataset (including both raw and preprocessed data) is hosted on Hugging Face:
 
-👉 https://huggingface.co/datasets/Dewey0115/ETH_ML4G_Project-1
+👉 https://huggingface.co/datasets/DeweyWang/ETH_ML4G_Project-1
 
 **Contents:**
 - Raw data (~18.66 GB)
