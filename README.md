@@ -111,7 +111,7 @@ The full dataset (including both raw and preprocessed data) is hosted on Hugging
 pip install -U huggingface_hub
 
 # download entire dataset
-hf download Dewey0115/ETH_ML4G_Project-1 \
+hf download DeweyWang/ETH_ML4G_Project-1 \
   --repo-type dataset \
   --local-dir all_dataset/
 ```
