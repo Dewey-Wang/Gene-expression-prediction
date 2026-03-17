@@ -96,7 +96,7 @@ make reset   # clean everything and reinitialize from scratch
 
 The full dataset (including both raw and preprocessed data) is hosted on Hugging Face:
 
-👉 https://huggingface.co/datasets/Dewey0115/Gene-expression-prediction
+👉 https://huggingface.co/datasets/Dewey0115/ETH_ML4G_Project-1
 
 **Contents:**
 - Raw data (~18.66 GB)
@@ -111,7 +111,7 @@ The full dataset (including both raw and preprocessed data) is hosted on Hugging
 pip install -U huggingface_hub
 
 # download entire dataset
-hf download Dewey0115/Gene-expression-prediction \
+hf download Dewey0115/ETH_ML4G_Project-1 \
   --repo-type dataset \
   --local-dir data/
 ```
