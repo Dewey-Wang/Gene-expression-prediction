@@ -92,13 +92,29 @@ make reset   # clean everything and reinitialize from scratch
 
 ---
 
-## Data
+## Dataset (Hugging Face)
 
-The **ML4G_Project_1_Data** folder data is available via **Polybox**:
-**Link:** [https://polybox.ethz.ch/index.php/s/XJZFdLSZNHpEDLw](https://polybox.ethz.ch/index.php/s/XJZFdLSZNHpEDLw)
-**Password:** `transcription_factor_2025`
+The full dataset (including both raw and preprocessed data) is hosted on Hugging Face:
 
-Place downloaded data under the repo root (the Docker command above mounts it to `/workspace`).
+👉 https://huggingface.co/datasets/Dewey0115/Gene-expression-prediction
+
+**Contents:**
+- Raw data (~18.66 GB)
+- Preprocessed data (~6.36 GB)
+- Ready-to-use features for machine learning
+
+### Download Options
+
+#### Hugging Face CLI 
+
+```bash
+pip install -U huggingface_hub
+
+# download entire dataset
+hf download Dewey0115/Gene-expression-prediction \
+  --repo-type dataset \
+  --local-dir data/
+```
 
 ---
 

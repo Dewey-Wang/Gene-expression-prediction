@@ -222,24 +222,13 @@ pyrightconfig.json
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 
-ML4G_Project_1_Data/**/*.bed
-ML4G_Project_1_Data/**/*.bw
-ML4G_Project_1_Data/**/*.bigwig
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X1_all_rank_features.tsv
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X2_all_rank_features.tsv
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X3_all_rank_features.tsv
-preprocessed_data/reference/1. merged data/with_y_100_one_side/X2_all_rank_features_with_y.tsv
-preprocessed_data/reference/1. merged data/with_y_100_one_side/X1_all_rank_features_with_y.tsv
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X1_all_logzscore_logzscore.tsv
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X2_all_logzscore_logzscore.tsv
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X3_all_logzscore_logzscore.tsv
-presentation.pptx
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X2_all_raw_raw_qn.tsv
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X3_all_raw_raw_qn.tsv
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X1_all_raw_raw_qn.tsv
-preprocessed_data/reference/1. merged data/with_y_100_one_side/X1_all_raw_raw_qn_with_y.tsv
-preprocessed_data/reference/1. merged data/with_y_100_one_side/X2_all_raw_raw_qn_with_y.tsv
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X2_all_raw_raw.tsv
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X2_all_zscore_zscore.tsv
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X3_all_raw_raw.tsv
-preprocessed_data/reference/1. merged data/without_y_100_one_side/X3_all_zscore_zscore.tsv
+# ignore everything inside
+all_dataset/ML4G_Project_1_Data/*
+all_dataset/preprocessed_data/*
+
+# BUT keep folder structure + docs
+!all_dataset/ML4G_Project_1_Data/.gitkeep
+!all_dataset/ML4G_Project_1_Data/README.md
+
+!all_dataset/preprocessed_data/.gitkeep
+!all_dataset/preprocessed_data/README.md
